@@ -16,9 +16,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/festival" element={<FestivalPage />} />
         <Route path="/festival/:festivalId" element={<FestivalDetailsPage />} />
-        <Route path="/log-in" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/sign-up" element={<SignUpPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>

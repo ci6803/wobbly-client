@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
 import axios from 'axios';
-import FestivalCard from '../components/FestivalCard/FestivalCard';
+import FestivalCard from '../components/FestivalCard';
 const API_URL = "http://localhost:5005";
 
 export default function FestivalsPage() {

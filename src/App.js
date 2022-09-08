@@ -8,10 +8,12 @@ import LoginPage from "./pages/LoginPage";
 import ProfilePage from "./pages/ProfilePage";
 import SignUpPage from "./pages/SignupPage";
 import ErrorPage from "./pages/ErrorPage";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/festival" element={<FestivalPage />} />

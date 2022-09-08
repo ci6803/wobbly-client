@@ -23,7 +23,7 @@ const handleSignupSubmit = (e) => {
 
     axios.post(`${API_URL}/auth/signup`, requestBody)
     .then((response) => {
-        navigate('/login');
+        navigate('/');
     })
     .catch((error) => {
         console.log(error)

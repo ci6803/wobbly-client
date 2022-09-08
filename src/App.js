@@ -7,6 +7,7 @@ import FestivalDetailsPage from "./pages/FestivalDetailsPage";
 import LoginPage from "./pages/LoginPage";
 import ProfilePage from "./pages/ProfilePage";
 import SignUpPage from "./pages/SignupPage";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/log-in" element={<LoginPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/sign-up" element={<SignUpPage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
   );

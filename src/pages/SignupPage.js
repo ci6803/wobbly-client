@@ -26,8 +26,7 @@ const handleSignupSubmit = (e) => {
         navigate('/login');
     })
     .catch((error) => {
-        const errorDescription = error.response.data.message;
-        setErrorMessage(errorDescription);
+        console.log(error)
     })
 };
 

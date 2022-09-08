@@ -9,6 +9,7 @@ import ProfilePage from "./pages/ProfilePage";
 import SignUpPage from "./pages/SignupPage";
 import ErrorPage from "./pages/ErrorPage";
 import Navbar from "./components/Navbar";
+import AddFestivalPage from "./pages/AddFestivalPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path='/festival/add' element={<AddFestivalPage/>}/>
         <Route path="/festival" element={<FestivalPage />} />
         <Route path="/festival/:festivalId" element={<FestivalDetailsPage />} />
         <Route path="/login" element={<LoginPage />} />

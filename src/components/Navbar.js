@@ -28,10 +28,10 @@ function Navbar() {
       <header>
         <ul>
           <li>
-            <Link to="/log-in">Login</Link>
+            <Link to="/login">Login</Link>
           </li>
           <li>
-            <Link to="/sign-up">Signup</Link>
+            <Link to="/signup">Signup</Link>
           </li>
           <li>
             <Link to="/festival">Festivals</Link>

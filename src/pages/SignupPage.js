@@ -1,4 +1,23 @@
-import React from 'react'
+import { useState } from "react";
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios';
+
+const API_URL = 'htpp://localhost:5005';
+
+function SignUpPage() {
+const [email, setEmail] = useState("");
+const [username, setUsername] = useState("");
+const [password, setPassword] = useState("");
+const [name, setName] = useState("");
+const [errorMessage, setErrorMessage] = useState(null)
+
+const handleEmail = (e) => setEmail(e.target.value);
+const handleUsername = (e) => setUsername(e.target.value);
+const handlePassword = (e) => setPassword(e.target.value);
+const handleName = (e) => setName(e.target.value);
+
+
+}
 
 export default function SignupPage() {
   return (

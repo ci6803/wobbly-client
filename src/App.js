@@ -8,14 +8,14 @@ import LoginPage from "./pages/LoginPage";
 import ProfilePage from "./pages/ProfilePage";
 import SignUpPage from "./pages/SignupPage";
 import ErrorPage from "./pages/ErrorPage";
-import Navbar from "./components/Navbar";
+import ResponsiveAppBar from "./components/Navbar";
 import AddFestivalPage from "./pages/AddFestivalPage";
 import EditFestivalPage from "./pages/EditFestivalPage";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <ResponsiveAppBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/festival/add" element={<AddFestivalPage />} />

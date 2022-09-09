@@ -10,7 +10,7 @@ import { AuthContext } from '../context/auth.context';
 
 const ResponsiveAppBar = () => {
 
-  const { isLoggedIn,logOutUser, user } = useContext(AuthContext);
+  const { isLoggedIn,logOutUser } = useContext(AuthContext);
 
   return (
     <motion.div initial={{y: -50}} animate={{y:0}}>

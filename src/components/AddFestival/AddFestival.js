@@ -46,9 +46,9 @@ function AddFestival() {
                 <label>type:</label>
                 <input type='text' name='type' value={festival.type} onChange={handleChange}/>
                 <label>Start Date:</label>
-                <input type='text' name='startDate' value={festival.startDate} onChange={handleChange}/>
+                <input type='date' name='startDate' value={festival.startDate} onChange={handleChange}/>
                 <label>End Date:</label>
-                <input type='text' name='endDate' value={festival.endDate} onChange={handleChange}/>
+                <input type='date' name='endDate' value={festival.endDate} onChange={handleChange}/>
                 <button type='submit'>Submit</button>
             </form>
         </div>

@@ -89,7 +89,7 @@ function EditFestivalPage(props) {
           onChange={(e) => setStartDate(e.target.value)}
         />
 
-        <label>Start date:</label>
+        <label>End date:</label>
         <input
           type="date"
           name="endDate"

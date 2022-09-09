@@ -9,8 +9,10 @@ export default function FestivalDetailsPage() {
   const { festivalId } = useParams();
 
   const getFestival = () => {
+    const storedToken = localStorage.getItem("authToken");
+
     axios
-      .get(`${API_URL}/api/festival/${festivalId}`)
+      .get(`${API_URL}/api/festival/${festivalId}`, { headers: {Authorization: `Bearer ${storedToken}`}})
       .then((response) => {
         const oneFestival = response.data;
         console.log(oneFestival);

@@ -10,6 +10,7 @@ import SignUpPage from "./pages/SignupPage";
 import ErrorPage from "./pages/ErrorPage";
 import Navbar from "./components/Navbar";
 import AddFestivalPage from "./pages/AddFestivalPage";
+import EditFestivalPage from "./pages/EditFestivalPage";
 
 function App() {
   return (
@@ -17,9 +18,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path='/festival/add' element={<AddFestivalPage/>}/>
+        <Route path="/festival/add" element={<AddFestivalPage />} />
         <Route path="/festival" element={<FestivalPage />} />
         <Route path="/festival/:festivalId" element={<FestivalDetailsPage />} />
+        <Route
+          path="/festival/edit/:festivalId"
+          element={<EditFestivalPage />}
+        />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/signup" element={<SignUpPage />} />

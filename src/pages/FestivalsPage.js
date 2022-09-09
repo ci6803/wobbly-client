@@ -2,7 +2,6 @@ import React from 'react'
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import FestivalCard from '../components/FestivalCard/FestivalCard';
-import AddFestival from '../components/AddFestival/AddFestival';
 import { Link } from 'react-router-dom';
 const API_URL = "http://localhost:5005";
 

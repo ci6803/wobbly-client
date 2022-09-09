@@ -2,13 +2,15 @@ import { useState } from "react";
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
 
-const API_URL = 'htpp://localhost:5005';
+const API_URL = "http://localhost:5005";
 
-function SignUpPage() {
+function SignUpPage(props) {
 const [email, setEmail] = useState("");
 const [username, setUsername] = useState("");
 const [password, setPassword] = useState("");
 const [name, setName] = useState("");
+const [errorMessage, setErrorMessage] = useState(null)
+
 
 const handleEmail = (e) => setEmail(e.target.value);
 const handleUsername = (e) => setUsername(e.target.value);
@@ -23,10 +25,13 @@ const handleSignupSubmit = (e) => {
 
     axios.post(`${API_URL}/auth/signup`, requestBody)
     .then((response) => {
-        navigate('/');
+        navigate('/login');
     })
     .catch((error) => {
-        console.log(error)
+        console.log(error.response.data)
+        const errorDescription = error.response.data.message;
+        setErrorMessage(errorDescription);
+
     })
 };
 
@@ -68,6 +73,7 @@ const handleSignupSubmit = (e) => {
 
     <button type="submit">Sign up here</button>
     </form>
+    {errorMessage && <p>{errorMessage}</p>}
     <h4>If you already have an account click here</h4>
     
 

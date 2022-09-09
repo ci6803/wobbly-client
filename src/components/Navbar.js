@@ -22,6 +22,7 @@ const ResponsiveAppBar = () => {
             <Link style={{textDecoration: 'none', color: '#223843'}} to='/'><strong>HOME</strong></Link>
             <Link style={{textDecoration: 'none', color: '#223843', marginLeft: 20}} to='/festival'><strong>FESTIVALS</strong></Link>
             <Link style={{textDecoration: 'none', color: '#223843', marginLeft: 20}} to='/profile'><strong>PROFILE</strong></Link>
+            <button onClick={logOutUser} style={{marginLeft: 20}}>Logout</button>
           </Box>
           )}
           {!isLoggedIn && (

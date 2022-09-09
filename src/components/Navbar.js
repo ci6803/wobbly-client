@@ -1,47 +1,33 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import { AuthContext } from "../context/auth.context";
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Container from '@mui/material/Container';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-function Navbar() {
-
-  const { logOutUser } = useContext(AuthContext);
+const ResponsiveAppBar = () => {
   return (
-    <div>
-      {/* add condition for autentication */}
-      {/* add logo*/}
-      {/* add logout */}
-      <header>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/festival">Festivals</Link>
-          </li>
-          <li>
-            <Link to="/profile">Profile</Link>
-          </li>
-          <li>
-            <button onClick={logOutUser}>Logout</button>
-            
-          </li>
-        </ul>
-      </header>
-      <header>
-        <ul>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
-          <li>
-            <Link to="/signup">Signup</Link>
-          </li>
-          <li>
-            <Link to="/festival">Festivals</Link>
-          </li>
-        </ul>
-      </header>
-    </div>
+    <motion.div initial={{y: -50}} animate={{y:0}}>
+          <AppBar position="static" sx={{background: 'transparent'}}>
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Box>
+            <Link style={{textDecoration: 'none', color: '#223843'}} to='/'><strong>HOME</strong></Link>
+            <Link style={{textDecoration: 'none', color: '#223843', marginLeft: 20}} to='/festival'><strong>FESTIVALS</strong></Link>
+            <Link style={{textDecoration: 'none', color: '#223843', marginLeft: 20}} to='/profile'><strong>PROFILE</strong></Link>
+          </Box>
+          {/* BELOW IS FOR IF THE USER IS NOT SIGNED IN */}
+          {/* <Box>
+            <Link style={{textDecoration: 'none', color: '#223843'}} to='/signup'><strong>SIGNUP</strong></Link>
+            <Link style={{textDecoration: 'none', color: '#223843', marginLeft: 20}} to='/login'><strong>LOGIN</strong></Link>
+            <Link style={{textDecoration: 'none', color: '#223843', marginLeft: 20}} to='/festival'><strong>FESTIVALS</strong></Link>
+          </Box> */}
+        </Toolbar>
+      </Container>
+    </AppBar>
+    </motion.div>
   );
-}
+};
 
-export default Navbar;
+export default ResponsiveAppBar;

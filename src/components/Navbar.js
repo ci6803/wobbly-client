@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 const ResponsiveAppBar = () => {
   return (
     <motion.div initial={{y: -50}} animate={{y:0}}>
-          <AppBar position="static" sx={{background: 'transparent'}}>
+      <AppBar position="static" sx={{background: 'transparent'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box>

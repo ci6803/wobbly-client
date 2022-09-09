@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/auth.context";
 
 function Navbar() {
+
+  const { logOutUser } = useContext(AuthContext);
   return (
     <div>
       {/* add condition for autentication */}
@@ -19,9 +22,8 @@ function Navbar() {
             <Link to="/profile">Profile</Link>
           </li>
           <li>
-            <form action="">
-              <button>Logout</button>
-            </form>
+            <button onClick={logOutUser}>Logout</button>
+            
           </li>
         </ul>
       </header>

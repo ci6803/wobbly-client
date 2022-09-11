@@ -7,6 +7,7 @@ import Container from '@mui/material/Container';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { AuthContext } from '../context/auth.context';
+import Button from '@mui/material/Button';
 
 const ResponsiveAppBar = () => {
 
@@ -18,18 +19,30 @@ const ResponsiveAppBar = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {isLoggedIn && (
-          <Box>
-            <Link style={{textDecoration: 'none', color: '#223843'}} to='/'><strong>HOME</strong></Link>
-            <Link style={{textDecoration: 'none', color: '#223843', marginLeft: 20}} to='/festival'><strong>FESTIVALS</strong></Link>
-            <Link style={{textDecoration: 'none', color: '#223843', marginLeft: 20}} to='/profile'><strong>PROFILE</strong></Link>
-            <button onClick={logOutUser} style={{marginLeft: 20}}>Logout</button>
-          </Box>
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
+              <Button sx={{ my: 2, color: 'black', display: 'block'}}>
+                <Link style={{textDecoration: 'none', color: 'black'}} to='/'><strong>HOME</strong></Link>
+              </Button>
+              <Button sx={{ my: 2, color: 'black', display: 'block' }}>
+                <Link style={{textDecoration: 'none', color: 'black'}} to='/festival'><strong>FESTIVALS</strong></Link>
+              </Button>
+              <Button sx={{ my: 2, color: 'black', display: 'block' }}>
+                <Link style={{textDecoration: 'none', color: 'black'}} to='/profile'><strong>PROFILE</strong></Link>
+              </Button>
+              <Button onClick={logOutUser} sx={{ my: 2, color: 'white', display: 'flex', background: '#757ce8'}}><strong>LOGOUT</strong></Button>  
+            </Box>
           )}
           {!isLoggedIn && (
-           <Box>
-            <Link style={{textDecoration: 'none', color: '#223843'}} to='/signup'><strong>SIGNUP</strong></Link>
-            <Link style={{textDecoration: 'none', color: '#223843', marginLeft: 20}} to='/login'><strong>LOGIN</strong></Link>
-            <Link style={{textDecoration: 'none', color: '#223843', marginLeft: 20}} to='/festival'><strong>FESTIVALS</strong></Link>
+           <Box sx={{display: 'flex', alignItems: 'center'}}>
+            <Button sx={{ my: 2, color: 'black', display: 'block' }}>
+              <Link style={{textDecoration: 'none', color: 'black'}} to='/signup'><strong>SIGNUP</strong></Link>
+            </Button>
+            <Button sx={{ my: 2, color: 'black', display: 'block' }}>
+            <Link style={{textDecoration: 'none', color: 'black'}} to='/login'><strong>LOGIN</strong></Link>
+            </Button>
+            <Button sx={{ my: 2, color: 'black', display: 'block' }}>
+              <Link style={{textDecoration: 'none', color: 'black'}} to='/festival'><strong>FESTIVALS</strong></Link>
+            </Button>
           </Box> 
           )}
         </Toolbar>

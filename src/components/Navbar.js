@@ -20,27 +20,27 @@ const ResponsiveAppBar = () => {
         <Toolbar disableGutters>
           {isLoggedIn && (
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
-              <Button sx={{ my: 2, color: 'black', display: 'block'}}>
+              <Button sx={{ my: 2, color: 'black', display: 'block', margin: 1}}>
                 <Link style={{textDecoration: 'none', color: 'black'}} to='/'><strong>HOME</strong></Link>
               </Button>
-              <Button sx={{ my: 2, color: 'black', display: 'block' }}>
+              <Button sx={{ my: 2, color: 'black', display: 'block', margin: 1}}>
                 <Link style={{textDecoration: 'none', color: 'black'}} to='/festival'><strong>FESTIVALS</strong></Link>
               </Button>
-              <Button sx={{ my: 2, color: 'black', display: 'block' }}>
+              <Button sx={{ my: 2, color: 'black', display: 'block', margin: 1 }}>
                 <Link style={{textDecoration: 'none', color: 'black'}} to='/profile'><strong>PROFILE</strong></Link>
               </Button>
-              <Button onClick={logOutUser} sx={{ my: 2, color: 'white', display: 'flex', background: '#757ce8'}}><strong>LOGOUT</strong></Button>  
+              <Button onClick={logOutUser} sx={{ my: 2, color: 'white', display: 'flex', background: '#d77a61', margin: 1}}><strong>LOGOUT</strong></Button>  
             </Box>
           )}
           {!isLoggedIn && (
            <Box sx={{display: 'flex', alignItems: 'center'}}>
-            <Button sx={{ my: 2, color: 'black', display: 'block' }}>
+            <Button sx={{ my: 2, color: 'black', display: 'block', margin: 1 }}>
               <Link style={{textDecoration: 'none', color: 'black'}} to='/signup'><strong>SIGNUP</strong></Link>
             </Button>
-            <Button sx={{ my: 2, color: 'black', display: 'block' }}>
+            <Button sx={{ my: 2, color: 'black', display: 'block', margin: 1}}>
             <Link style={{textDecoration: 'none', color: 'black'}} to='/login'><strong>LOGIN</strong></Link>
             </Button>
-            <Button sx={{ my: 2, color: 'black', display: 'block' }}>
+            <Button sx={{ my: 2, color: 'black', display: 'block', margin: 1}}>
               <Link style={{textDecoration: 'none', color: 'black'}} to='/festival'><strong>FESTIVALS</strong></Link>
             </Button>
           </Box> 

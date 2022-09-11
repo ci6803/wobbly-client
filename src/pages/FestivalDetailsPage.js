@@ -33,7 +33,7 @@ export default function FestivalDetailsPage() {
       <p>{festival.description}</p>
 
       <Link to={`/festival/edit/${festivalId}`}>
-        <button>Edit Project</button>
+        <button>Edit Festival</button>
       </Link>
     </div>
   );

@@ -8,10 +8,8 @@ export default function FestivalDetailsPage() {
   const { user } = useContext(AuthContext);
   const [festival, setFestival] = useState({});
   const [comment, setComment] = useState('');
-  const storedToken = localStorage.getItem('authToken');
-
+  const [comments, setComments] = useState([{}]);
   const { festivalId } = useParams();
-
   const navigate = useNavigate();
 
   const getFestival = () => {
@@ -21,8 +19,8 @@ export default function FestivalDetailsPage() {
       .get(`${API_URL}/api/festival/${festivalId}`, {headers: {Authorization: `Bearer ${storedToken}`}})
       .then((response) => {
         const oneFestival = response.data;
-        console.log(oneFestival);
         setFestival(oneFestival);
+        setComments(oneFestival.comments);
       })
       .catch((err) => console.log(err));
   };
@@ -42,10 +40,9 @@ export default function FestivalDetailsPage() {
     })
   }
 
-
   useEffect(() => {
-    console.log(festivalId);
     getFestival();
+    console.log(comments);
   }, [festivalId]);
 
   return (
@@ -57,13 +54,15 @@ export default function FestivalDetailsPage() {
       <Link to={`/festival/edit/${festivalId}`}>
         <button>Edit Festival</button>
       </Link>
-
-      <h2>Add a comment:</h2>
-      <form onSubmit={handleSubmit}>
-          <label>Message:</label>
-          <input type='text' name='message' onChange={handleChange}/>
-          <button type='submit'>Submit</button>
-      </form>
+      <div>
+        <h2>Comments:</h2>
+        {comments.map(comment => <p>{comment.message}</p>)}
+        <form onSubmit={handleSubmit}>
+            <label>Add a comment:</label>
+            <input type='text' name='message' onChange={handleChange}/>
+            <button type='submit'>Submit</button>
+        </form>
+      </div>
     </div>
   );
 }

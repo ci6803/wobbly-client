@@ -1,0 +1,5 @@
+.navbar-container {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}

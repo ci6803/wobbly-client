@@ -110,6 +110,7 @@ const ResponsiveAppBar = () => {
           </Toolbar>
         </Container>
       </AppBar>
+
     </motion.div>
   );
 };

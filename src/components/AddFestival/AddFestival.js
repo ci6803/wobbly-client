@@ -1,7 +1,9 @@
+import {uploadImage} from "../../api/service"
 import React, { useState } from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 const API_URL = "http://localhost:5005";
+
 
 function AddFestival() {
 
@@ -16,7 +18,23 @@ function AddFestival() {
         endDate: ''
     })
 
-    
+   
+
+    const handleFileUpload = (e) => {
+        const uploadData = new FormData();
+
+        uploadData.append('image', e.target.files[0])
+        
+
+        
+        uploadImage(uploadData)
+        .then(response => {
+            setFestival({
+                ...festival, image: response.fileUrl
+            })
+        })
+        .catch(err => console.log("Error while uploading file: ", err))
+    }
     const handleSubmit =  async (e) => {
         e.preventDefault();
         await axios.post(`${API_URL}/api/festival`, festival);
@@ -40,7 +58,8 @@ function AddFestival() {
                 <label>Name:</label>
                 <input type='text' name='name' value={festival.name} onChange={handleChange}/>
                 <label>image:</label> 
-                <input type='text' name='image' value={festival.image} onChange={handleChange}/>
+                <input type="file" onChange={(e) => handleFileUpload(e)} />
+                {/* <input type='text' name='image' value={festival.image} onChange={handleChange}/> */}
                 <label>description:</label>
                 <input type='text' name='description' value={festival.description} onChange={handleChange}/>
                 <label>type:</label>

@@ -11,17 +11,18 @@ import Button from '@mui/material/Button';
 
 const ResponsiveAppBar = () => {
 
-  const { isLoggedIn,logOutUser } = useContext(AuthContext);
+  const { isLoggedIn,logOutUser} = useContext(AuthContext);
 
   return (
     <motion.div initial={{y: -50}} animate={{y:0}}>
       <AppBar position="static" sx={{background: 'transparent'}}>
-      <Container maxWidth="xl">
+      <Container maxWidth="l">
         <Toolbar disableGutters>
           {isLoggedIn && (
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
+            <div>
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'}}}>
               <Button sx={{ my: 2, color: 'black', display: 'block', margin: 1}}>
-                <Link style={{textDecoration: 'none', color: 'black'}} to='/'><strong>HOME</strong></Link>
+                <Link style={{textDecoration: 'none', color: 'black', }} to='/'><strong>HOME</strong></Link>
               </Button>
               <Button sx={{ my: 2, color: 'black', display: 'block', margin: 1}}>
                 <Link style={{textDecoration: 'none', color: 'black'}} to='/festival'><strong>FESTIVALS</strong></Link>
@@ -29,8 +30,9 @@ const ResponsiveAppBar = () => {
               <Button sx={{ my: 2, color: 'black', display: 'block', margin: 1 }}>
                 <Link style={{textDecoration: 'none', color: 'black'}} to='/profile'><strong>PROFILE</strong></Link>
               </Button>
-              <Button onClick={logOutUser} sx={{ my: 2, color: 'white', display: 'flex', background: '#d77a61', margin: 1, '&:hover': { backgroundColor: '#0a0a0a', color: 'white'}}}><strong>LOGOUT</strong></Button>  
+              <Button onClick={logOutUser} sx={{ my: 2, color: 'black', display: 'flex', background: '#d77a61', margin: 1, '&:hover': { backgroundColor: '#0a0a0a',color: 'white'}}}><strong>LOGOUT</strong></Button>  
             </Box>
+            </div>
           )}
           {!isLoggedIn && (
            <Box sx={{display: 'flex', alignItems: 'center'}}>

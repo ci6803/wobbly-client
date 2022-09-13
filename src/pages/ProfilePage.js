@@ -15,6 +15,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import {uploadImage} from "../api/service"
 const API_URL = "http://localhost:5005";
 
 function Copyright() {
@@ -82,7 +83,9 @@ export default function Album() {
             >
               Welcome {currentUser.name}
               <br></br>
-              <Button variant="contained">Upload Image</Button>
+              <Button variant="contained">Upload Image
+              {/* <input type="file" onChange={(e) => handleFileUpload(e)} /> */}
+              </Button>
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               

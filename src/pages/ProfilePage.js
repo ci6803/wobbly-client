@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -11,18 +10,31 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 const API_URL = "http://localhost:5005";
-import Link from '@mui/material/Link';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-
 
 function Copyright() {
+  return (
+    <Typography variant="body2" color="white" align="right">
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        Wobbly
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
+const cards = [1, 2, 3, 4, 5, 6];
 
-export default function ProfilePage() {
+const theme = createTheme();
+
+export default function Album() {
   const { profileId } = useParams();
   const [currentUser, setCurrentUser] = useState({});
   const [festivals, setFestivals] = useState([{}]);
@@ -45,24 +57,7 @@ export default function ProfilePage() {
     console.log(festivals);
   }, [])
 
-  return (
-    <Typography variant="body2" color="white" align="right">
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Wobbly
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
-const cards = [1, 2, 3, 4, 5, 6];
-
-const theme = createTheme();
-
-export default function Album() {
-  const { user } = useContext(AuthContext);
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -84,7 +79,7 @@ export default function Album() {
               color="text.primary"
               gutterBottom
             >
-              Welcome {user.name}
+              Welcome {currentUser.name}
               <br></br>
               <Button variant="contained">Upload Image</Button>
             </Typography>

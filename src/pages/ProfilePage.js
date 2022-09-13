@@ -19,7 +19,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 function Copyright() {
 
   return (
-    <Typography variant="body2" color="text.secondary" align="center">
+    <Typography variant="body2" color="white" align="right">
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
         Wobbly
@@ -44,9 +44,9 @@ export default function Album() {
         {/* Hero unit */}
         <Box
           sx={{
-            bgcolor: '#eff1f3',
+            bgcolor: '#DBE2EF',
             pt: 4,
-            pb: 10,
+            pb: 5,
           }}
         >
           <Container maxWidth="sm">
@@ -76,24 +76,25 @@ export default function Album() {
             </Stack>
           </Container>
         </Box>
-        <Container sx={{ py: 8, bgcolor: '#dbd3d8'}} maxWidth="md">
+        <Container sx={{ py: 8, bgcolor: 'white'}} maxWidth="100%">
+        <Container sx={{ py: 8, bgcolor: 'white'}} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' , bgcolor: '#d8b4a0', boxShadow: 10 }}
+                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' , bgcolor: '#3F72AF', boxShadow: 10 }}
                 >
                   <CardMedia
                     component="img"
                     sx={{
                       // 16:9
-                       border: 1
+                     
                     }}
                     image="../../Reading-and-Leeds-Festival-2022-Everything-you-need-to-know.jpeg"
                     alt="festival"
                   />
-                  <CardContent sx={{ flexGrow: 1 , bgcolor: '#d8b4a0'}}>
+                  <CardContent sx={{ flexGrow: 1 , bgcolor: '#3F72AF', color: '#DBE2EF'}}>
                     <Typography gutterBottom variant="h5" component="h2">
                       Festival Name
                     </Typography>
@@ -102,16 +103,17 @@ export default function Album() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" sx={{border: 2 , color: 'black'}}>Remove</Button>
+                    <Button size="small" sx={{color: 'white', bgcolor: '#112D4E'}}>Remove</Button>
                   </CardActions>
                 </Card>
               </Grid>
             ))}
           </Grid>
         </Container>
+        </Container>
       </main>
       {/* Footer */}
-      <Box sx={{ bgcolor: 'white', p: 6 }} component="footer">
+      <Box sx={{ bgcolor: '#112D4E', p: 6 }} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
           {/* Footer */}
         </Typography>

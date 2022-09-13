@@ -30,7 +30,7 @@ function Copyright() {
   );
 }
 
-const cards = [1, 2, 3, 4, 5, 6];
+// const cards = [1, 2, 3, 4, 5, 6];
 
 const theme = createTheme();
 
@@ -99,7 +99,7 @@ export default function Album() {
             </Stack>
           </Container>
         </Box>
-        <Container sx={{ py: 8, bgcolor: 'white'}} maxWidth="100%">
+        <Container sx={{ py: 8, bgcolor: 'white'}} minWidth="100%">
         <Container sx={{ py: 8, bgcolor: 'white'}} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
@@ -136,7 +136,7 @@ export default function Album() {
         </Container>
       </main>
       {/* Footer */}
-      <Box sx={{ bgcolor: '#112D4E', p: 6 }} component="footer">
+      <Box sx={{ bgcolor: '#112D4E', p: 6}} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
           {/* Footer */}
         </Typography>

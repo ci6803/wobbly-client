@@ -52,22 +52,31 @@ function AddFestival() {
 
     return (
         <div className="AddFestival">
-            <h2>List an Upcoming Festival</h2>
-
+            <h2>Create an Upcoming Festival</h2>
+            <hr></hr>
             <form onSubmit={handleSubmit}>
                 <label>Name:</label>
                 <input type='text' name='name' value={festival.name} onChange={handleChange}/>
+                <br>
+                </br>
                 <label>image:</label> 
                 <input type="file" onChange={(e) => handleFileUpload(e)} />
-                {/* <input type='text' name='image' value={festival.image} onChange={handleChange}/> */}
+                <br>
+                </br>
                 <label>description:</label>
                 <input type='text' name='description' value={festival.description} onChange={handleChange}/>
+                <br>
+                </br>
                 <label>type:</label>
                 <input type='text' name='type' value={festival.type} onChange={handleChange}/>
+                <br>
+                </br>
                 <label>Start Date:</label>
                 <input type='date' name='startDate' value={festival.startDate} onChange={handleChange}/>
                 <label>End Date:</label>
                 <input type='date' name='endDate' value={festival.endDate} onChange={handleChange}/>
+                <br>
+                </br>
                 <button type='submit'>Submit</button>
             </form>
         </div>

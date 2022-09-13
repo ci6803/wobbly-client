@@ -26,7 +26,7 @@ function App() {
           element={<EditFestivalPage />}
         />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/profile/:profileId" element={<ProfilePage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>

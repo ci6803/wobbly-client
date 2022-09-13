@@ -25,11 +25,17 @@ export default function FestivalDetailsPage() {
       .catch((err) => console.log(err));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     axios.post(`${API_URL}/api/festival/${festivalId}`, comment)
     navigate('/festival');
     setComment('');
+  }
+
+  const handleSubmitFestival = (e) => {
+    e.preventDefault();
+    axios.post(`${API_URL}/api/festival/${festivalId}/add`, user);
+    navigate('/');
   }
 
   function handleChange(e) {
@@ -42,6 +48,7 @@ export default function FestivalDetailsPage() {
 
   useEffect(() => {
     getFestival();
+    console.log(festival);
     console.log(comments);
   }, [festivalId]);
 
@@ -50,10 +57,12 @@ export default function FestivalDetailsPage() {
       <h1>{festival.name}</h1>
       <img src={festival.image} alt="festivalImage" />
       <p>{festival.description}</p>
-
       <Link to={`/festival/edit/${festivalId}`}>
         <button>Edit Festival</button>
       </Link>
+      <form onSubmit={handleSubmitFestival}>
+        <button type='submit'>Add to your festivals</button>
+      </form>
       <div>
         <h2>Comments:</h2>
         {comments.map(comment => <p>{comment.message}</p>)}

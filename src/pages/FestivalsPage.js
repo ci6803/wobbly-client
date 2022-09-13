@@ -25,7 +25,7 @@ export default function FestivalsPage() {
     {festivals.map((festival) => <FestivalCard key={festival._id} {...festival}/>)}
 
     <div>
-      <Link to='/festival/add'><h2>List an Upcoming Festival</h2></Link>
+      <Link to='/festival/add'><h2>Create an Upcoming Festival</h2></Link>
     </div>
 
     </div>

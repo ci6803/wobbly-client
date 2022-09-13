@@ -16,6 +16,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import {uploadImage} from "../api/service"
+import { useNavigate } from 'react-router-dom';
 const API_URL = "http://localhost:5005";
 
 function Copyright() {
@@ -40,6 +41,9 @@ export default function Album() {
   const [currentUser, setCurrentUser] = useState({});
   const [festivals, setFestivals] = useState([{}]);
 
+
+  const navigate = useNavigate();
+
   const getUser = () => {
     const storedToken = localStorage.getItem("authToken");
 
@@ -58,7 +62,27 @@ export default function Album() {
     console.log(festivals);
   }, [])
 
+  const [profile, setProfile] = useState({image: ''})
 
+const handleFileUpload = (e) => {
+  const uploadData = new FormData();
+
+  uploadData.append('image', e.target.files[0])
+  
+  uploadImage(uploadData)
+  .then(response => {
+      setProfile({
+          ...profile, image: response.fileUrl
+      })
+  })
+  .catch(err => console.log("Error while uploading file: ", err))
+}
+
+const handleSubmit =  async (e) => {
+  e.preventDefault();
+  await axios.post(`${API_URL}/api/profile/:profileId`, profile);
+  navigate('/profile/:profileId');
+}
   return (
     <ThemeProvider theme={theme}>
 
@@ -83,9 +107,16 @@ export default function Album() {
             >
               Welcome {currentUser.name}
               <br></br>
+              <img src={profile.image} alt="profile" width={200}>
+                </img>
+              <br></br>
               <Button variant="contained">Upload Image
-              {/* <input type="file" onChange={(e) => handleFileUpload(e)} /> */}
               </Button>
+              <form onSubmit={handleSubmit}>
+              <input type="file" onChange={(e) => handleFileUpload(e)} />
+              <button type="submit">Submit</button>
+              </form>
+              
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               
@@ -102,8 +133,8 @@ export default function Album() {
             </Stack>
           </Container>
         </Box>
-        <Container sx={{ py: 8, bgcolor: 'white'}} minWidth="100%">
-        <Container sx={{ py: 8, bgcolor: 'white'}} maxWidth="md">
+        <Container sx={{ py: 8, bgcolor: 'white'}} minwidth="100%">
+        <Container sx={{ py: 8, bgcolor: 'white'}} maxwidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
             {festivals.map((festival) => (

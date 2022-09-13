@@ -27,7 +27,7 @@ function Copyright(props) {
     >
       {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        Wobbly
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -69,37 +69,115 @@ function SignUpPage(props) {
 
   return (
     <div className="SignupPage">
-      <h1>Please Sign up Here</h1>
+      <ThemeProvider theme={theme}>
+        <Container component="main" maxWidth="xs">
+          <CssBaseline />
+          <Box
+            sx={{
+              marginTop: 8,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+              <LockOutlinedIcon />
+            </Avatar>
+            <Typography component="h1" variant="h5">
+              Sign up
+            </Typography>
 
-      <form onSubmit={handleSignupSubmit}>
-        <label>Username</label>
-        <input
-          type="text"
-          name="username"
-          value={username}
-          onChange={handleUsername}
-        />
+            <Box
+              component="form"
+              noValidate
+              onSubmit={handleSignupSubmit}
+              sx={{ mt: 3 }}
+            >
+              <Grid container spacing={2}>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    autoComplete="username"
+                    name="username"
+                    value={username}
+                    required
+                    fullWidth
+                    id="username"
+                    label="Username"
+                    autoFocus
+                    onChange={handleUsername}
+                  />
+                </Grid>
 
-        <label>Email</label>
-        <input type="email" name="email" value={email} onChange={handleEmail} />
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    required
+                    fullWidth
+                    id="fullName"
+                    label="Full Name"
+                    name="fullName"
+                    value={name}
+                    autoComplete="full-name"
+                    onChange={handleName}
+                  />
+                </Grid>
 
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          value={password}
-          onChange={handlePassword}
-        />
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    id="email"
+                    label="Email Address"
+                    name="email"
+                    value={email}
+                    autoComplete="email"
+                    onChange={handleEmail}
+                  />
+                </Grid>
 
-        <label>Full Name</label>
-        <input type="text" name="name" value={name} onChange={handleName} />
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    name="password"
+                    value={password}
+                    label="Password"
+                    type="password"
+                    id="password"
+                    autoComplete="new-password"
+                    onChange={handlePassword}
+                  />
+                </Grid>
 
-        <hr></hr>
-
-        <button type="submit">Sign up here</button>
-      </form>
-      {errorMessage && <p>{errorMessage}</p>}
-      <h4>If you already have an account click here</h4>
+                <Grid item xs={12}>
+                  <FormControlLabel
+                    control={
+                      <Checkbox value="allowExtraEmails" color="primary" />
+                    }
+                    label="I want to receive inspiration, marketing promotions and updates via email."
+                  />
+                </Grid>
+              </Grid>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Sign Up
+              </Button>
+              <Grid container justifyContent="flex-end">
+                <Grid item>
+                  <Link href="/login" variant="body2">
+                    Already have an account? Log in
+                  </Link>
+                </Grid>
+              </Grid>
+            </Box>
+          </Box>
+          <Copyright sx={{ mt: 5 }} />
+        </Container>
+        {errorMessage && <p>{errorMessage}</p>}
+      </ThemeProvider>
     </div>
   );
 }

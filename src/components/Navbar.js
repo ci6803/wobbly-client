@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useContext, useParams } from 'react';
+import { useContext} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { AuthContext } from '../context/auth.context';
 import Button from '@mui/material/Button';
+import { Avatar } from '@mui/material';
 import './Navbar.css';
 
 const ResponsiveAppBar = () => {
@@ -33,7 +34,8 @@ const ResponsiveAppBar = () => {
                 <Link style={{textDecoration: 'none', color: 'black'}} to={`/profile/${user._id}`}><strong>PROFILE</strong></Link>
               </Button>
             </Box>
-            <Button onClick={logOutUser} sx={{ my: 2, color: 'black', display: 'flex', background: '#DBE2EF', margin: 1, '&:hover': { backgroundColor: '#3F72AF',color: 'white'}}}><strong>LOGOUT</strong></Button>  
+            <Button onClick={logOutUser} sx={{ my: 2, color: 'black', display: 'flex', background: '#DBE2EF', margin: 1, '&:hover': { backgroundColor: '#3F72AF',color: 'white'}}}><strong>LOGOUT</strong></Button> 
+            <Avatar alt="Remy Sharp" src={user.image} sx={{marginLeft: 1, marginRight: 1, marginTop: 0.5}}/> 
             </div>
           )}
           {!isLoggedIn && (

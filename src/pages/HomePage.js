@@ -149,7 +149,7 @@ import * as React from "react";
 import Main from "../components/Homepage/Main.jsx";
 import MainValues from "../components/Homepage/MainValues";
 // import ProductHowItWorks from "./modules/views/ProductHowItWorks";
-// import ProductCTA from "./modules/views/ProductCTA";
+import EmailSection from "../components/Homepage/EmailSection";
 // import AppAppBar from "./modules/views/AppAppBar";
 // import withRoot from "./modules/withRoot";
 
@@ -160,9 +160,9 @@ function HomePage() {
       <Main />
       <MainValues />
       {/* <ProductCategories />
-      <ProductHowItWorks />
-      <ProductCTA />
-      <ProductSmokingHero />
+      <ProductHowItWorks /> */}
+      <EmailSection />
+      {/* <ProductSmokingHero />
       <AppFooter /> */}
     </React.Fragment>
   );

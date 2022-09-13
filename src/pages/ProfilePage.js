@@ -44,7 +44,7 @@ export default function Album() {
         {/* Hero unit */}
         <Box
           sx={{
-            bgcolor: 'orange',
+            bgcolor: '#eff1f3',
             pt: 4,
             pb: 10,
           }}
@@ -58,50 +58,51 @@ export default function Album() {
               gutterBottom
             >
               Welcome {user.name}
+              <br></br>
+              <Button variant="contained">Upload Image</Button>
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               
             </Typography>
             <Stack
-              sx={{ pt: 4 , bgcolor: 'blue'}}
+              sx={{ pt: 4 }}
               direction="row"
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">Upload Image</Button>
-              <Button variant="outlined">See My Followers</Button>
+             
+              <Button variant="contained" sx={{color: 'white',bgcolor: 'black'}}>Follow Me</Button>
+              <Button variant="contained" sx={{color: 'black',bgcolor: 'white'}}>Follower Count: 0</Button>
             </Stack>
           </Container>
         </Box>
-        <Container sx={{ py: 8, bgcolor: 'red'}} maxWidth="md">
+        <Container sx={{ py: 8, bgcolor: '#dbd3d8'}} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' , bgcolor: 'green'}}
+                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' , bgcolor: '#d8b4a0', boxShadow: 10 }}
                 >
                   <CardMedia
                     component="img"
                     sx={{
                       // 16:9
-                      pt: '56.25%', bgcolor: 'purple'
+                       border: 1
                     }}
-                    image="https://source.unsplash.com/random"
-                    alt="random"
+                    image="../../Reading-and-Leeds-Festival-2022-Everything-you-need-to-know.jpeg"
+                    alt="festival"
                   />
-                  <CardContent sx={{ flexGrow: 1 , bgcolor: 'pink'}}>
+                  <CardContent sx={{ flexGrow: 1 , bgcolor: '#d8b4a0'}}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      Festival Name
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the
-                      content.
+                      Festival details
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
+                    <Button size="small" sx={{border: 2 , color: 'black'}}>Remove</Button>
                   </CardActions>
                 </Card>
               </Grid>
@@ -110,7 +111,7 @@ export default function Album() {
         </Container>
       </main>
       {/* Footer */}
-      <Box sx={{ bgcolor: 'yellow', p: 6 }} component="footer">
+      <Box sx={{ bgcolor: 'white', p: 6 }} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
           {/* Footer */}
         </Typography>

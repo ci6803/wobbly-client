@@ -147,7 +147,7 @@ import * as React from "react";
 // import ProductSmokingHero from "./modules/views/ProductSmokingHero";
 // import AppFooter from "./modules/views/AppFooter";
 import Main from "../components/Homepage/Main.jsx";
-// import ProductValues from "./modules/views/ProductValues";
+import MainValues from "../components/Homepage/MainValues";
 // import ProductHowItWorks from "./modules/views/ProductHowItWorks";
 // import ProductCTA from "./modules/views/ProductCTA";
 // import AppAppBar from "./modules/views/AppAppBar";
@@ -158,8 +158,8 @@ function HomePage() {
     <React.Fragment>
       {/* <AppAppBar /> */}
       <Main />
-      {/* <ProductValues />
-      <ProductCategories />
+      <MainValues />
+      {/* <ProductCategories />
       <ProductHowItWorks />
       <ProductCTA />
       <ProductSmokingHero />

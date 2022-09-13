@@ -33,7 +33,7 @@ const ResponsiveAppBar = () => {
                 <Link style={{textDecoration: 'none', color: 'black'}} to={`/profile/${user._id}`}><strong>PROFILE</strong></Link>
               </Button>
             </Box>
-            <Button onClick={logOutUser} sx={{ my: 2, color: 'black', display: 'flex', background: '#d77a61', margin: 1, '&:hover': { backgroundColor: '#0a0a0a',color: 'white'}}}><strong>LOGOUT</strong></Button>  
+            <Button onClick={logOutUser} sx={{ my: 2, color: 'black', display: 'flex', background: '#DBE2EF', margin: 1, '&:hover': { backgroundColor: '#3F72AF',color: 'white'}}}><strong>LOGOUT</strong></Button>  
             </div>
           )}
           {!isLoggedIn && (

@@ -8,7 +8,7 @@ import LoginPage from "./pages/LoginPage";
 import ProfilePage from "./pages/ProfilePage";
 import SignUpPage from "./pages/SignupPage";
 import ErrorPage from "./pages/ErrorPage";
-import ResponsiveAppBar from "./components/Navbar";
+import ResponsiveAppBar from "./components/Navbar/Navbar";
 import AddFestivalPage from "./pages/AddFestivalPage";
 import EditFestivalPage from "./pages/EditFestivalPage";
 

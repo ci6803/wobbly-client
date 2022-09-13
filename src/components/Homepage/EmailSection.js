@@ -46,7 +46,7 @@ function EmailSection() {
               sx={{
                 display: "flex",
                 justifyContent: "center",
-                bgcolor: "warning.main",
+                bgcolor: "success.main",
                 py: 8,
                 px: 3,
               }}
@@ -57,10 +57,10 @@ function EmailSection() {
                 sx={{ maxWidth: 400 }}
               >
                 <Typography variant="h2" component="h2" gutterBottom>
-                  Receive offers
+                  Receive information
                 </Typography>
                 <Typography variant="h5">
-                  Taste the holidays of the everyday close to home.
+                  Get closer to the upcoming festivals.
                 </Typography>
                 <TextField
                   noBorder
@@ -99,7 +99,7 @@ function EmailSection() {
             />
             <Box
               component="img"
-              src="https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=750"
+              src="https://images.unsplash.com/photo-1505842465776-3b4953ca4f44?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
               alt="call to action"
               sx={{
                 position: "absolute",

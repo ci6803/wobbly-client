@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useContext } from 'react';
+import { useContext, useParams } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,6 +13,7 @@ import './Navbar.css';
 const ResponsiveAppBar = () => {
 
   const { isLoggedIn,logOutUser} = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
   return (
     <motion.div initial={{y: -50}} animate={{y:0}}>
@@ -29,7 +30,7 @@ const ResponsiveAppBar = () => {
                 <Link style={{textDecoration: 'none', color: 'black'}} to='/festival'><strong>FESTIVALS</strong></Link>
               </Button>
               <Button sx={{ my: 2, color: 'black', display: 'block', margin: 1 }}>
-                <Link style={{textDecoration: 'none', color: 'black'}} to='/profile'><strong>PROFILE</strong></Link>
+                <Link style={{textDecoration: 'none', color: 'black'}} to={`/profile/${user._id}`}><strong>PROFILE</strong></Link>
               </Button>
             </Box>
             <Button onClick={logOutUser} sx={{ my: 2, color: 'black', display: 'flex', background: '#d77a61', margin: 1, '&:hover': { backgroundColor: '#0a0a0a',color: 'white'}}}><strong>LOGOUT</strong></Button>  

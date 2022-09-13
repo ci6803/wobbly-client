@@ -48,6 +48,7 @@ export default function FestivalDetailsPage() {
 
   useEffect(() => {
     getFestival();
+    console.log(festival);
     console.log(comments);
   }, [festivalId]);
 

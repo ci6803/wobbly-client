@@ -11,12 +11,39 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
+const API_URL = "http://localhost:5005";
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
- import { AuthContext } from '../context/auth.context';
- import { useContext } from 'react';
+
 
 function Copyright() {
+
+
+export default function ProfilePage() {
+  const { profileId } = useParams();
+  const [currentUser, setCurrentUser] = useState({});
+  const [festivals, setFestivals] = useState([{}]);
+
+  const getUser = () => {
+    const storedToken = localStorage.getItem("authToken");
+
+    axios
+    .get(`${API_URL}/api/profile/${profileId}`, {headers: {Authorization: `Bearer ${storedToken}`}})
+    .then((response) => {
+      const oneUser = response.data;
+      setCurrentUser(oneUser);
+      setFestivals(oneUser.festivals);
+    })
+    .catch((err) => console.log(err));
+  }
+
+  useEffect(() => {
+    getUser();
+    console.log(festivals);
+  }, [])
 
   return (
     <Typography variant="body2" color="white" align="right">

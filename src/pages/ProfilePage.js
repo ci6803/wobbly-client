@@ -60,6 +60,7 @@ export default function Album() {
 
   return (
     <ThemeProvider theme={theme}>
+
       <CssBaseline />
       
       <main>
@@ -102,8 +103,8 @@ export default function Album() {
         <Container sx={{ py: 8, bgcolor: 'white'}} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
+            {festivals.map((festival) => (
+              <Grid item key={festival._id} xs={12} sm={6} md={4}>
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' , bgcolor: '#3F72AF', boxShadow: 10 }}
                 >
@@ -113,15 +114,15 @@ export default function Album() {
                       // 16:9
                      
                     }}
-                    image="../../Reading-and-Leeds-Festival-2022-Everything-you-need-to-know.jpeg"
+                    image={festival.image}
                     alt="festival"
                   />
                   <CardContent sx={{ flexGrow: 1 , bgcolor: '#3F72AF', color: '#DBE2EF'}}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Festival Name
+                      {festival.name}
                     </Typography>
                     <Typography>
-                      Festival details
+                      {festival.description}
                     </Typography>
                   </CardContent>
                   <CardActions>

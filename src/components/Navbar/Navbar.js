@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { AuthContext } from "../../context/auth.context";
 import Button from "@mui/material/Button";
 import "./Navbar.css";
+import { Avatar } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const rightLink = {
@@ -34,7 +35,7 @@ const theme = createTheme({
 });
 
 const ResponsiveAppBar = () => {
-  const { isLoggedIn, logOutUser } = useContext(AuthContext);
+  const { isLoggedIn, logOutUser, user } = useContext(AuthContext);
 
   return (
     <ThemeProvider theme={theme}>
@@ -44,7 +45,7 @@ const ResponsiveAppBar = () => {
             {isLoggedIn && (
               <div className="navbar-container">
                 <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-                  <img src="../image/logo.png" alt="logo" sx={{ my: 1 }} />
+                  <img src="" alt="logo" sx={{ my: 1 }} />
                   <Button
                     sx={{ my: 2, color: "black", display: "block", margin: 1 }}
                   >
@@ -70,7 +71,7 @@ const ResponsiveAppBar = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "#F9F7F7" }}
-                      to="/profile"
+                      to={`/profile/${user._id}`}
                     >
                       <strong>PROFILE</strong>
                     </Link>
@@ -89,6 +90,7 @@ const ResponsiveAppBar = () => {
                 >
                   <strong>LOGOUT</strong>
                 </Button>
+                <Avatar alt="User" src={user.image} sx={{marginLeft: 1, marginRight: 1, marginTop: 0.5}}/>
               </div>
             )}
             {!isLoggedIn && (

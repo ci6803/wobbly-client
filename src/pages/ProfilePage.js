@@ -17,6 +17,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import {uploadImage} from "../api/service"
 import { useNavigate } from 'react-router-dom';
+import { blue } from '@mui/material/colors';
 const API_URL = "http://localhost:5005";
 
 function Copyright() {
@@ -110,8 +111,6 @@ const handleSubmit =  async (e) => {
               <img src={profile.image} alt="profile" width={200}>
                 </img>
               <br></br>
-              <Button variant="contained">Upload Image
-              </Button>
               <form onSubmit={handleSubmit}>
               <input type="file" onChange={(e) => handleFileUpload(e)} />
               <button type="submit">Submit</button>

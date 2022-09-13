@@ -1,3 +1,4 @@
+import "../App.css";
 import { useState, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -67,7 +68,7 @@ function LoginPage(props) {
   };
 
   return (
-    <div className="LoginPage">
+    <div className="loginPage">
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="xs">
           <CssBaseline />

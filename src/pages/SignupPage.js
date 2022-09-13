@@ -68,7 +68,7 @@ function SignUpPage(props) {
   };
 
   return (
-    <div className="SignupPage">
+    <div className="signupPage">
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="xs">
           <CssBaseline />

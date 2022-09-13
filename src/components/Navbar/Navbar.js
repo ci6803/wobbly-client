@@ -9,15 +9,39 @@ import { motion } from "framer-motion";
 import { AuthContext } from "../../context/auth.context";
 import Button from "@mui/material/Button";
 import "./Navbar.css";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+const rightLink = {
+  fontSize: 16,
+  color: "common.white",
+  ml: 3,
+};
+
+const theme = createTheme({
+  palette: {
+    info: {
+      main: "#3F72AF",
+    },
+    secondary: {
+      main: "#DBE2EF",
+    },
+    primary: {
+      main: "#112D4E",
+    },
+    success: {
+      main: "#F9F7F7",
+    },
+  },
+});
 
 const ResponsiveAppBar = () => {
   const { isLoggedIn, logOutUser } = useContext(AuthContext);
 
   return (
-    <motion.div initial={{ y: -50 }} animate={{ y: 0 }}>
-      <AppBar position="static" sx={{ background: "transparent" }}>
-        <Container maxWidth="l">
-          <Toolbar disableGutters>
+    <ThemeProvider theme={theme}>
+      <motion.div initial={{ y: -50 }} animate={{ y: 0 }}>
+        <AppBar position="fixed">
+          <Toolbar sx={{ justifyContent: "space-between" }}>
             {isLoggedIn && (
               <div className="navbar-container">
                 <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
@@ -26,7 +50,7 @@ const ResponsiveAppBar = () => {
                     sx={{ my: 2, color: "black", display: "block", margin: 1 }}
                   >
                     <Link
-                      style={{ textDecoration: "none", color: "black" }}
+                      style={{ textDecoration: "none", color: "#F9F7F7" }}
                       to="/"
                     >
                       <strong>HOME</strong>
@@ -36,7 +60,7 @@ const ResponsiveAppBar = () => {
                     sx={{ my: 2, color: "black", display: "block", margin: 1 }}
                   >
                     <Link
-                      style={{ textDecoration: "none", color: "black" }}
+                      style={{ textDecoration: "none", color: "#F9F7F7" }}
                       to="/festival"
                     >
                       <strong>FESTIVALS</strong>
@@ -46,7 +70,7 @@ const ResponsiveAppBar = () => {
                     sx={{ my: 2, color: "black", display: "block", margin: 1 }}
                   >
                     <Link
-                      style={{ textDecoration: "none", color: "black" }}
+                      style={{ textDecoration: "none", color: "#F9F7F7" }}
                       to="/profile"
                     >
                       <strong>PROFILE</strong>
@@ -74,8 +98,9 @@ const ResponsiveAppBar = () => {
                   sx={{ my: 2, color: "black", display: "block", margin: 1 }}
                 >
                   <Link
-                    style={{ textDecoration: "none", color: "black" }}
+                    style={{ textDecoration: "none", color: "#F9F7F7" }}
                     to="/signup"
+                    sx={rightLink}
                   >
                     <strong>SIGNUP</strong>
                   </Link>
@@ -84,8 +109,9 @@ const ResponsiveAppBar = () => {
                   sx={{ my: 2, color: "black", display: "block", margin: 1 }}
                 >
                   <Link
-                    style={{ textDecoration: "none", color: "black" }}
+                    style={{ textDecoration: "none", color: "#F9F7F7" }}
                     to="/login"
+                    sx={rightLink}
                   >
                     <strong>LOGIN</strong>
                   </Link>
@@ -94,7 +120,7 @@ const ResponsiveAppBar = () => {
                   sx={{ my: 2, color: "black", display: "block", margin: 1 }}
                 >
                   <Link
-                    style={{ textDecoration: "none", color: "black" }}
+                    style={{ textDecoration: "none", color: "#F9F7F7" }}
                     to="/festival"
                   >
                     <strong>FESTIVALS</strong>
@@ -103,9 +129,9 @@ const ResponsiveAppBar = () => {
               </Box>
             )}
           </Toolbar>
-        </Container>
-      </AppBar>
-    </motion.div>
+        </AppBar>
+      </motion.div>
+    </ThemeProvider>
   );
 };
 //navbar

@@ -48,6 +48,7 @@ export default function FestivalDetailsPage() {
 
   useEffect(() => {
     getFestival();
+    //eslint-disable-next-line 
   }, [festivalId]);
 
   return (

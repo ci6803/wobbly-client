@@ -6,7 +6,7 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
 import AttractionsRoundedIcon from '@mui/icons-material/AttractionsRounded';
 import { Container} from '@mui/system';
-import FestivalCard from './FestivalCard.css'
+import './FestivalCard.css'
 
 
  function TitlebarImageList({_id, name, image, type, startDate, endDate}) {

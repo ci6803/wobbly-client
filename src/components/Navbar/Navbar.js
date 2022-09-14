@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -90,7 +90,6 @@ const ResponsiveAppBar = () => {
                 >
                   <strong>LOGOUT</strong>
                 </Button>
-                <Avatar alt="User" src={user.image} sx={{marginLeft: 1, marginRight: 1, marginTop: 0.5}}/>
               </div>
             )}
             {!isLoggedIn && (
@@ -117,16 +116,6 @@ const ResponsiveAppBar = () => {
                     <strong>LOGIN</strong>
                   </Link>
                 </Button>
-                {/* <Button
-                  sx={{ my: 2, color: "black", display: "block", margin: 1 }}
-                >
-                  <Link
-                    style={{ textDecoration: "none", color: "#F9F7F7" }}
-                    to="/festival"
-                  >
-                    <strong>FESTIVALS</strong>
-                  </Link>
-                </Button> */}
               </Box>
             )}
           </Toolbar>
@@ -135,5 +124,5 @@ const ResponsiveAppBar = () => {
     </ThemeProvider>
   );
 };
-//navbar
+//navbar 1
 export default ResponsiveAppBar;

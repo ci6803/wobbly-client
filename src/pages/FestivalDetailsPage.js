@@ -52,8 +52,10 @@ export default function FestivalDetailsPage() {
 
   return (
     <div className="FestivalDetailsPage">
+      <br></br>
+      <br></br>
       <h1>{festival.name}</h1>
-      <img src={festival.image} alt="festivalImage" />
+      <img width={800} src={festival.image} alt="festivalImage" />
       <p>{festival.description}</p>
       <Link to={`/festival/edit/${festivalId}`}>
         <button>Edit Festival</button>

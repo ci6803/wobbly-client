@@ -54,11 +54,11 @@ function MainValues() {
               <Box sx={item}>
                 <Diversity1RoundedIcon sx={{ fontSize: 55 }} />
                 <Typography variant="h6" sx={{ my: 5 }}>
-                  Find festival buddies
+                  Live chat
                 </Typography>
                 <Typography variant="h5">
                   {
-                    "Can't find anyone to join a festival together? You can expand your connection here to find festival buddies."
+                    "Instantly connect with fellow festival lovers with video chat or text messages."
                   }
                 </Typography>
               </Box>
@@ -71,10 +71,8 @@ function MainValues() {
                 </Typography>
                 <Typography variant="h5">
                   {
-                    "Privatize a pool, take a Japanese bath or wake up in 900m2 of garden… "
+                    "Personalised profile page, save your favourite festivals to remind you for upcoming events."
                   }
-
-                  {"your Sundays will not be alike."}
                 </Typography>
               </Box>
             </Grid>
@@ -82,13 +80,13 @@ function MainValues() {
               <Box sx={item}>
                 <AttractionsRoundedIcon sx={{ fontSize: 55 }} />
                 <Typography variant="h6" sx={{ my: 5 }}>
-                  Exclusive rates
+                  {" "}
+                  Find festival buddies
                 </Typography>
                 <Typography variant="h5">
                   {
-                    "By registering, you will access specially negotiated rates "
+                    "Can't find anyone to join a festival together? You can expand your connection here to find festival buddies."
                   }
-                  {"that you will not find anywhere else."}
                 </Typography>
               </Box>
             </Grid>

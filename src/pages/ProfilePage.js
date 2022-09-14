@@ -10,28 +10,13 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import {uploadImage} from "../api/service"
 import { useNavigate } from 'react-router-dom';
-import { blue } from '@mui/material/colors';
 const API_URL = 'https://magenta-spider-cape.cyclic.app';
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="white" align="right">
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Wobbly
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 const theme = createTheme();
 
@@ -59,6 +44,7 @@ export default function Album() {
   useEffect(() => {
     getUser();
     console.log(festivals);
+    //eslint-disable-next-line
   }, [])
 
 const handleFileUpload = (e) => {

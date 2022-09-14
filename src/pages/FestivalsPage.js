@@ -3,8 +3,6 @@ import {useState, useEffect} from 'react';
 import axios from 'axios';
 import FestivalCard from '../components/FestivalCard/FestivalCard';
 import { Link } from 'react-router-dom';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 const API_URL = 'https://magenta-spider-cape.cyclic.app';
 
 export default function FestivalsPage() {

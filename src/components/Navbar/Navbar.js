@@ -45,7 +45,11 @@ const ResponsiveAppBar = () => {
             {isLoggedIn && (
               <div className="navbar-container">
                 <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-                  <img src="" alt="logo" sx={{ my: 1 }} />
+                  <img
+                    src="../../image/logo.png"
+                    alt="logo"
+                    className="logo"
+                  />
                   <Button
                     sx={{ my: 2, color: "black", display: "block", margin: 1 }}
                   >

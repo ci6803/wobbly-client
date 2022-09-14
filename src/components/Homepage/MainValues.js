@@ -54,15 +54,11 @@ function MainValues() {
               <Box sx={item}>
                 <Diversity1RoundedIcon sx={{ fontSize: 55 }} />
                 <Typography variant="h6" sx={{ my: 5 }}>
-                  The best luxury hotels
+                  Find festival buddies
                 </Typography>
                 <Typography variant="h5">
                   {
-                    "From the latest trendy boutique hotel to the iconic palace with XXL pool"
-                  }
-
-                  {
-                    ", go for a mini-vacation just a few subway stops away from your home."
+                    "Can't find anyone to join a festival together? You can expand your connection here to find festival buddies."
                   }
                 </Typography>
               </Box>

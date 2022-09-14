@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 import axios from 'axios';
 import FestivalCard from '../components/FestivalCard/FestivalCard';
 import { Link } from 'react-router-dom';
-const API_URL = 'https://magenta-spider-cape.cyclic.app';
+const API_URL = process.env.REACT_APP_API_URL || 'https://magenta-spider-cape.cyclic.app';
 
 export default function FestivalsPage() {
 

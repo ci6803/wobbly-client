@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect, useContext } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
-const API_URL = 'https://magenta-spider-cape.cyclic.app';
+const API_URL = process.env.REACT_APP_API_URL || 'https://magenta-spider-cape.cyclic.app';
 
 export default function FestivalDetailsPage() {
   const { user } = useContext(AuthContext);

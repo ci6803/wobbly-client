@@ -88,7 +88,8 @@ const handleSubmit =  async (e) => {
     <ThemeProvider theme={theme}>
 
       <CssBaseline />
-      
+      <br></br>
+      <br></br>
       <main>
         {/* Hero unit */}
         <Box
@@ -106,7 +107,7 @@ const handleSubmit =  async (e) => {
               color="text.primary"
               gutterBottom
             >
-              Welcome {currentUser.name}
+              Welcome {currentUser.name} 
               <br></br>
               <img src={profile.image} alt="profile" width={200}>
                 </img>

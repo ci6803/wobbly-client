@@ -22,6 +22,8 @@ export default function FestivalsPage() {
 
   return (
     <div className="FestivalsPage">
+    <br></br>
+    <br></br>
     {festivals.map((festival) => <FestivalCard key={festival._id} {...festival}/>)}
 
     <div>

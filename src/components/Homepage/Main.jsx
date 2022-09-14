@@ -61,10 +61,10 @@ export default function HomePage() {
           variant="contained"
           size="large"
           component="a"
-          href="/festival"
+          href="/signup"
           sx={{ minWidth: 200 }}
         >
-          View festivals
+          Signup
         </Button>
         <Typography variant="body2" color="secondary" sx={{ mt: 2 }}>
           It's time to get together

@@ -1,0 +1,14 @@
+.Join {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Rooms {
+    display: flex;
+    align-items: center;
+} 
+
+.room-button {
+    height: 60px;
+}

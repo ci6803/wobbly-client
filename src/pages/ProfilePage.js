@@ -100,6 +100,7 @@ const handleRemove = (e, id) => {
             pb: 5,
           }}
         >
+        <br></br>
           <Container maxWidth="sm">
             <Typography
               component="h2"
@@ -128,9 +129,17 @@ const handleRemove = (e, id) => {
               spacing={2}
               justifyContent="center"
             >
-             
               <Button variant="contained" sx={{color: 'white',bgcolor: 'black'}}>Follow Me</Button>
-              <Button variant="contained" sx={{color: 'black',bgcolor: 'white'}}>Follower Count: 0</Button>
+              <Button
+              sx={{color: 'black',bgcolor: 'white'}}
+              variant="contained"
+              onClick={() => {
+                navigate('/join')
+              }}
+                >
+                Join A Chat Room
+              </Button>
+
             </Stack>
           </Container>
         </Box>

@@ -44,6 +44,7 @@ export default function Album() {
   useEffect(() => {
     getUser();
     console.log(festivals);
+     // eslint-disable-next-line
   }, [])
 
 const handleFileUpload = (e) => {

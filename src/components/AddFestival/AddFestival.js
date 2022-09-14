@@ -2,6 +2,20 @@ import {uploadImage} from "../../api/service"
 import React, { useState } from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import Link from "@mui/material/Link";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 const API_URL = "http://localhost:5005";
 
 
@@ -53,34 +67,93 @@ function AddFestival() {
 
     return (
         <div className="AddFestival">
-            <h2>Create an Upcoming Festival</h2>
-            <hr></hr>
-            <form onSubmit={handleSubmit}>
-                <label>Name:</label>
-                <input type='text' name='name' value={festival.name} onChange={handleChange}/>
-                <br>
-                </br>
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <Box
+          sx={{
+            marginTop: 8,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5">
+            Create an upcoming event
+          </Typography>
+
+          <Box
+            component="form"
+            onSubmit={handleSubmit}
+            noValidate
+            sx={{ mt: 1 }}
+          >
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="name"
+              type="name"
+              label="Name:"
+              name="name"
+              value={festival.name}
+              autoComplete="name"
+              autoFocus
+              onChange={handleChange}
+            />
                 <label>image:</label> 
                 <input type="file" onChange={(e) => handleFileUpload(e)} />
                 <br>
                 </br>
-                <label>description:</label>
-                <input type='text' name='description' value={festival.description} onChange={handleChange}/>
-                <br>
-                </br>
-                <label>type:</label>
-                <input type='text' name='type' value={festival.type} onChange={handleChange}/>
-                <br>
-                </br>
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="description"
+              type="description"
+              label="Description"
+              name="description"
+              value={festival.description}
+              autoComplete="description"
+              autoFocus
+              onChange={handleChange}
+            />
+                <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="type"
+              type="type"
+              label="Type"
+              name="type"
+              value={festival.type}
+              autoComplete="type"
+              autoFocus
+              onChange={handleChange}
+            />
                 <label>Start Date:</label>
-                <input type='date' name='startDate' value={festival.startDate} onChange={handleChange}/>
-                <label>End Date:</label>
-                <input type='date' name='endDate' value={festival.endDate} onChange={handleChange}/>
-                <br>
-                </br>
-                <button type='submit'>Submit</button>
-            </form>
-        </div>
+            <input
+              type="date"
+              name="startDate"
+              value={festival.startDate}
+              onChange={handleChange}
+            />
+            <br></br>
+            <label>End Date:</label>
+            <input
+              type="date"
+              name="endDate"
+              value={festival.endDate}
+              onChange={handleChange}
+            />
+                <br></br>
+            <button type="submit">Submit</button>
+          </Box>
+        </Box>
+      </Container>
+    </div>
     )
 }
 

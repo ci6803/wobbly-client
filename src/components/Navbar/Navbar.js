@@ -117,7 +117,7 @@ const ResponsiveAppBar = () => {
                     <strong>LOGIN</strong>
                   </Link>
                 </Button>
-                <Button
+                {/* <Button
                   sx={{ my: 2, color: "black", display: "block", margin: 1 }}
                 >
                   <Link
@@ -126,7 +126,7 @@ const ResponsiveAppBar = () => {
                   >
                     <strong>FESTIVALS</strong>
                   </Link>
-                </Button>
+                </Button> */}
               </Box>
             )}
           </Toolbar>

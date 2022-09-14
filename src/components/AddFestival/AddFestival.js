@@ -37,7 +37,8 @@ function AddFestival() {
     }
     const handleSubmit =  async (e) => {
         e.preventDefault();
-        await axios.post(`${API_URL}/api/festival`, festival);
+        const storedToken = localStorage.getItem('authToken');
+        await axios.post(`${API_URL}/api/festival`, festival, { headers: { Authorization: `Bearer ${storedToken}` } });
         navigate('/festival');
     }
 

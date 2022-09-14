@@ -43,7 +43,7 @@ function LoginPage(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
-  const [errorMessage, setErrorMessage] = useState(undefined);
+  const [setErrorMessage] = useState(undefined);
 
   const navigate = useNavigate();
 

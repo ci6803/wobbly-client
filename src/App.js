@@ -11,6 +11,8 @@ import ErrorPage from "./pages/ErrorPage";
 import ResponsiveAppBar from "./components/Navbar/Navbar";
 import AddFestivalPage from "./pages/AddFestivalPage";
 import EditFestivalPage from "./pages/EditFestivalPage";
+import Join from "./pages/VideoCall/Join";
+import Meeting from "./pages/VideoCall/Meeting";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/profile/:profileId" element={<ProfilePage />} />
         <Route path="/signup" element={<SignUpPage />} />
+        <Route path='/join' element={<Join/>}/>
+        <Route path='/meeting/:id' element={<Meeting/>}/>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>

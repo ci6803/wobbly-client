@@ -12,3 +12,9 @@
   width: 100%;
   justify-content: center;
 }
+
+.AddFestival,
+.EditFestivalPage {
+  margin-top: 8rem;
+}
+

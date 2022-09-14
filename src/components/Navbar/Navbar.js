@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useContext, useEffect, useState } from "react";
+import { useContext} from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 import { AuthContext } from "../../context/auth.context";
 import Button from "@mui/material/Button";
 import "./Navbar.css";
-import { Avatar } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const rightLink = {

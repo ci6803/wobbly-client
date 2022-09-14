@@ -15,10 +15,10 @@ function EditFestivalPage(props) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    //const storedToken = localStorage.getItem("authToken");
+    const storedToken = localStorage.getItem("authToken");
 
     axios
-      .get(`${API_URL}/api/festival/${festivalId}`)
+      .get(`${API_URL}/api/festival/${festivalId}`, { headers: { Authorization: `Bearer ${storedToken}` } })
       .then((response) => {
         const oneFestival = response.data;
         setName(oneFestival.name);
@@ -34,19 +34,19 @@ function EditFestivalPage(props) {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     const requestBody = { name, description, type, startDate, endDate };
-    //const storedToken = localStorage.getItem("authToken");
+    const storedToken = localStorage.getItem("authToken");
 
     axios
-      .put(`${API_URL}/api/festival/${festivalId}`, requestBody)
+      .put(`${API_URL}/api/festival/${festivalId}`, requestBody,  { headers: { Authorization: `Bearer ${storedToken}` } })
       .then((response) => {
         navigate(`/festival/${festivalId}`);
       });
   };
 
   const deleteFestival = () => {
-    //const storedToken = localStorage.getItem("authToken");
+    const storedToken = localStorage.getItem("authToken");
     axios
-      .delete(`${API_URL}/api/festival/${festivalId}`)
+      .delete(`${API_URL}/api/festival/${festivalId}`,  { headers: { Authorization: `Bearer ${storedToken}` } })
       .then(() => {
         navigate("/festival");
       })

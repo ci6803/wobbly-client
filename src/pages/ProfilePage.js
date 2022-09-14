@@ -78,6 +78,13 @@ const handleSubmit =  async (e) => {
   await axios.post(`${API_URL}/api/profile/${profileId}/photo`, image);
   navigate('/');
 }
+
+const handleRemove = (e, id) => {
+  e.preventDefault();
+  axios.post(`${API_URL}/api/profile/${profileId}/remove`, id);
+  navigate('/festival');
+}
+
   return (
     <ThemeProvider theme={theme}>
 
@@ -101,7 +108,7 @@ const handleSubmit =  async (e) => {
               color="text.primary"
               gutterBottom
             >
-              Welcome {currentUser.name} 
+              Welcome, {currentUser.name} 
               <br></br>
               <img src={currentUser.image} alt="profile" width={200}>
                 </img>
@@ -154,7 +161,9 @@ const handleSubmit =  async (e) => {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" sx={{color: 'white', bgcolor: '#112D4E'}}>Remove</Button>
+                    <form onSubmit={(e) => {handleRemove(e, festival._id)}}>
+                      <Button type='submit' size="small" sx={{color: 'white', bgcolor: '#112D4E'}}>Remove</Button>
+                    </form>
                   </CardActions>
                 </Card>
               </Grid>

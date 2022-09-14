@@ -35,7 +35,7 @@ export default function FestivalDetailsPage() {
   const handleSubmitFestival = (e) => {
     e.preventDefault();
     axios.post(`${API_URL}/api/festival/${festivalId}/add`, user);
-    navigate('/');
+    navigate(`/profile/${user._id}`);
   }
 
   function handleChange(e) {
@@ -48,8 +48,6 @@ export default function FestivalDetailsPage() {
 
   useEffect(() => {
     getFestival();
-    console.log(festival);
-    console.log(comments);
   }, [festivalId]);
 
   return (

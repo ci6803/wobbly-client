@@ -44,7 +44,7 @@ export default function Album() {
   useEffect(() => {
     getUser();
     console.log(festivals);
-  })
+  }, [])
 
 const handleFileUpload = (e) => {
   const uploadData = new FormData();

@@ -8,11 +8,12 @@ import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import IconButton from "@mui/material/IconButton";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import PostAddRoundedIcon from "@mui/icons-material/PostAddRounded";
+import CameraAltIcon from "@mui/icons-material/CameraAlt";
 const API_URL = "http://localhost:5005";
 
 const theme = createTheme({
@@ -171,13 +172,34 @@ function AddFestival() {
                 onChange={handleChange}
               />
               <br></br>
-              <label>Image: </label>
-              <input type="file" onChange={(e) => handleFileUpload(e)} />
+              {/* <label>Image: </label>
+              <input type="file" onChange={(e) => handleFileUpload(e)} /> */}
+
+              <Button variant="outlined" component="label">
+                upload Image
+                <input
+                  hidden
+                  accept="image/*"
+                  multiple
+                  type="file"
+                  onChange={(e) => handleFileUpload(e)}
+                />
+              </Button>
+              <IconButton
+                color="primary"
+                aria-label="upload picture"
+                component="label"
+              >
+                <input hidden accept="image/*" type="file" />
+                <CameraAltIcon />
+              </IconButton>
+
               <br></br>
               <br></br>
 
               <Button
                 type="submit"
+                size="small"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}

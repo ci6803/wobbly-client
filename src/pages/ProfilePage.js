@@ -143,7 +143,7 @@ const handleRemove = (e, id) => {
             </Stack>
           </Container>
         </Box>
-        <Container sx={{ py: 8, bgcolor: 'white'}} minwidth="100%">
+        <Container sx={{ py: 8, bgcolor: 'white'}} minwidth="100%" minheight="100%">
         <Container sx={{ py: 8, bgcolor: 'white'}} maxwidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
@@ -181,22 +181,6 @@ const handleRemove = (e, id) => {
         </Container>
         </Container>
       </main>
-      {/* Footer */}
-      <Box sx={{ bgcolor: '#112D4E', p: 6}} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          {/* Footer */}
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="white"
-          component="p"
-        >
-          {/* Something here to give the footer a purpose! */}
-        </Typography>
-        <Copyright />
-      </Box>
-      {/* End footer */}
     </ThemeProvider>
   );
 }

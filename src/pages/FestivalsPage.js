@@ -3,6 +3,8 @@ import {useState, useEffect} from 'react';
 import axios from 'axios';
 import FestivalCard from '../components/FestivalCard/FestivalCard';
 import { Link } from 'react-router-dom';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 const API_URL = "http://localhost:5005";
 
 export default function FestivalsPage() {
@@ -21,7 +23,6 @@ export default function FestivalsPage() {
   }, [])
 
   
-  
   return (
     <div className='festival-styling'>
       <div className="FestivalsPage">
@@ -32,8 +33,5 @@ export default function FestivalsPage() {
       <Link to='/festival/add'><h2>Create an Upcoming Festival</h2></Link>
     </div>
     </div>
-    
-
-    
   )
 }

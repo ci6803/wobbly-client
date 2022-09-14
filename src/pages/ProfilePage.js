@@ -33,15 +33,13 @@ function Copyright() {
   );
 }
 
-// const cards = [1, 2, 3, 4, 5, 6];
-
 const theme = createTheme();
 
 export default function Album() {
   const { profileId } = useParams();
   const [currentUser, setCurrentUser] = useState({});
   const [festivals, setFestivals] = useState([{}]);
-
+  const [image, setImage] = useState('');
 
   const navigate = useNavigate();
 
@@ -63,8 +61,6 @@ export default function Album() {
     console.log(festivals);
   }, [])
 
-  const [profile, setProfile] = useState({image: ''})
-
 const handleFileUpload = (e) => {
   const uploadData = new FormData();
 
@@ -72,17 +68,15 @@ const handleFileUpload = (e) => {
   
   uploadImage(uploadData)
   .then(response => {
-      setProfile({
-          ...profile, image: response.fileUrl
-      })
+      setImage(response.fileUrl);
   })
   .catch(err => console.log("Error while uploading file: ", err))
 }
 
 const handleSubmit =  async (e) => {
   e.preventDefault();
-  await axios.post(`${API_URL}/api/profile/:profileId`, profile);
-  navigate('/profile/:profileId');
+  await axios.post(`${API_URL}/api/profile/${profileId}/photo`, image);
+  navigate('/');
 }
   return (
     <ThemeProvider theme={theme}>
@@ -109,7 +103,7 @@ const handleSubmit =  async (e) => {
             >
               Welcome {currentUser.name} 
               <br></br>
-              <img src={profile.image} alt="profile" width={200}>
+              <img src={currentUser.image} alt="profile" width={200}>
                 </img>
               <br></br>
               <form onSubmit={handleSubmit}>

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
-const 'https://magenta-spider-cape.cyclic.app' = "http://localhost:5005";
+const API_URL = 'https://magenta-spider-cape.cyclic.app';
 
 const AuthContext = React.createContext();
 

@@ -18,7 +18,7 @@ import axios from 'axios';
 import {uploadImage} from "../api/service"
 import { useNavigate } from 'react-router-dom';
 import { blue } from '@mui/material/colors';
-const 'https://magenta-spider-cape.cyclic.app' = "http://localhost:5005";
+const API_URL = 'https://magenta-spider-cape.cyclic.app';
 
 function Copyright() {
   return (

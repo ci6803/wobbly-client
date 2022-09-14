@@ -16,7 +16,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-const 'https://magenta-spider-cape.cyclic.app' = "http://localhost:5005";
+const API_URL = 'https://magenta-spider-cape.cyclic.app';
 
 function Copyright(props) {
   return (

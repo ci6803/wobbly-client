@@ -5,7 +5,7 @@ import FestivalCard from '../components/FestivalCard/FestivalCard';
 import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-const 'https://magenta-spider-cape.cyclic.app' = "http://localhost:5005";
+const API_URL = 'https://magenta-spider-cape.cyclic.app';
 
 export default function FestivalsPage() {
 

@@ -20,16 +20,20 @@ export default function FestivalsPage() {
     getAllFestivals();
   }, [])
 
+  
+  
   return (
-    <div className="FestivalsPage">
-    <br></br>
-    <br></br>
-    {festivals.map((festival) => <FestivalCard key={festival._id} {...festival}/>)}
-
+    <div className='festival-styling'>
+      <div className="FestivalsPage">
+    
+    {festivals.map((festival) => <FestivalCard width="200" key={festival._id} {...festival}/>)}
+    </div>
     <div>
       <Link to='/festival/add'><h2>Create an Upcoming Festival</h2></Link>
     </div>
-
     </div>
+    
+
+    
   )
 }

@@ -1,5 +1,4 @@
-.FestivalCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.festival-styling {
+   
+    background-color: #DBE2EF;
 }

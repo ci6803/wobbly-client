@@ -12,7 +12,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import BorderColorRoundedIcon from "@mui/icons-material/BorderColorRounded";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
-const API_URL = "http://localhost:5005";
+const 'https://magenta-spider-cape.cyclic.app' = "http://localhost:5005";
 
 const theme = createTheme({
   palette: {

@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
-const API_URL = "http://localhost:5005";
+const 'https://magenta-spider-cape.cyclic.app'
 
 function Meeting() {
 

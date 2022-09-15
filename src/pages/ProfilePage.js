@@ -16,7 +16,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import {uploadImage} from "../api/service"
 import { useNavigate } from 'react-router-dom';
-const API_URL = process.env.REACT_APP_API_URL || 'https://magenta-spider-cape.cyclic.app';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5005';
 
 const theme = createTheme();
 

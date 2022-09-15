@@ -25,7 +25,7 @@ const theme = createTheme({
       main: "#DBE2EF",
     },
     primary: {
-      main: "#112D4E",
+      main: "#FFFFFF",
     },
     success: {
       main: "#F9F7F7",
@@ -53,7 +53,7 @@ const ResponsiveAppBar = () => {
                     sx={{ my: 2, color: "black", display: "block", margin: 1 }}
                   >
                     <Link
-                      style={{ textDecoration: "none", color: "#F9F7F7" }}
+                      style={{ textDecoration: "none", color: "#000000" }}
                       to="/"
                     >
                       <strong>HOME</strong>
@@ -63,7 +63,7 @@ const ResponsiveAppBar = () => {
                     sx={{ my: 2, color: "black", display: "block", margin: 1 }}
                   >
                     <Link
-                      style={{ textDecoration: "none", color: "#F9F7F7" }}
+                      style={{ textDecoration: "none", color: "#000000" }}
                       to="/festival"
                     >
                       <strong>FESTIVALS</strong>
@@ -73,7 +73,7 @@ const ResponsiveAppBar = () => {
                     sx={{ my: 2, color: "black", display: "block", margin: 1 }}
                   >
                     <Link
-                      style={{ textDecoration: "none", color: "#F9F7F7" }}
+                      style={{ textDecoration: "none", color: "#000000" }}
                       to={`/profile/${user._id}`}
                     >
                       <strong>PROFILE</strong>
@@ -86,9 +86,9 @@ const ResponsiveAppBar = () => {
                     my: 2,
                     color: "black",
                     display: "flex",
-                    background: "#d77a61",
+                    background: "#DBE2EF",
                     margin: 1,
-                    "&:hover": { backgroundColor: "#0a0a0a", color: "white" },
+                    "&:hover": { backgroundColor: "#DCCCBC", color: "white" },
                   }}
                 >
                   <strong>LOGOUT</strong>

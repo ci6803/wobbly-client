@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 
+
 function Copyright() {
   return (
     <Typography variant="body2" color="white" align="right">
@@ -29,7 +30,7 @@ function HomePage() {
       <EmailSection />
 
       <Box
-        sx={{ bgcolor: "#112D4E", p: 6 }}
+        sx={{ bgcolor: "#DCCCBC", p: 6 }}
         component="footer"
         className="footer"
       >

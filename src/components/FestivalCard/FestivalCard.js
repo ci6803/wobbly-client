@@ -23,7 +23,7 @@ import './FestivalCard.css'
             alt={''}
             loading="lazy"
           />
-          <ImageListItemBar sx={{bgcolor: '#3F72AF'}}
+          <ImageListItemBar sx={{bgcolor: '#DCCCBC'}}
             title={<Link to={`/festival/${_id}`}>{name}</Link>}
             subtitle={type}
             actionIcon={

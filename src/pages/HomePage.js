@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 
+
 function Copyright() {
   return (
     <Typography variant="body2" color="white" align="right">

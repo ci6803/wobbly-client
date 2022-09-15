@@ -114,7 +114,7 @@ export default function FestivalDetailsPage() {
           </Button>
         </div>
 
-        <Container className='details-comment-section' sx={{ marginTop: 5, boxShadow: 5, backgroundColor: '#DCCCBC', marginBottom: 5, paddingBottom: 5, width: 700, display: "flex"}}>
+        <Container className='details-comment-section' sx={{ marginTop: 5, boxShadow: 5, backgroundColor: '#DCCCBC', marginBottom: 5, paddingBottom: 5, width: 700}}>
         <div>
         <h2>Comments</h2>
         {comments.map(comment => <li>{comment.message}</li>)}

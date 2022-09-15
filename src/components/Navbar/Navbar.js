@@ -101,7 +101,7 @@ const ResponsiveAppBar = () => {
                   sx={{ my: 2, color: "black", display: "block", margin: 1 }}
                 >
                   <Link
-                    style={{ textDecoration: "none", color: "#F9F7F7" }}
+                    style={{ textDecoration: "none", color: "black" }}
                     to="/signup"
                     sx={rightLink}
                   >
@@ -112,7 +112,7 @@ const ResponsiveAppBar = () => {
                   sx={{ my: 2, color: "black", display: "block", margin: 1 }}
                 >
                   <Link
-                    style={{ textDecoration: "none", color: "#F9F7F7" }}
+                    style={{ textDecoration: "none", color: "black" }}
                     to="/login"
                     sx={rightLink}
                   >

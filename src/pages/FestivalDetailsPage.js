@@ -1,7 +1,13 @@
 import axios from "axios";
 import React, { useState, useEffect, useContext } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import { Container} from '@mui/system';
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import TextField from "@mui/material/TextField";
+
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5005';
 
 export default function FestivalDetailsPage() {
@@ -51,28 +57,99 @@ export default function FestivalDetailsPage() {
     //eslint-disable-next-line 
   }, [festivalId]);
 
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: "#DBE2EF",
+      },
+      secondary: {
+        main: "#F9F7F7",
+      },
+      info: {
+        main: "#D0C5E7",
+      },
+      success: {
+        main: "#DCCCBC",
+      },
+    },
+  });
+  
+
   return (
-    <div className="FestivalDetailsPage">
-      <br></br>
-      <br></br>
-      <h1>{festival.name}</h1>
-      <img width={800} src={festival.image} alt="festivalImage" />
-      <p>{festival.description}</p>
-      <Link to={`/festival/edit/${festivalId}`}>
-        <button>Edit Festival</button>
-      </Link>
-      <form onSubmit={handleSubmitFestival}>
-        <button type='submit'>Add to your festivals</button>
-      </form>
-      <div>
-        <h2>Comments:</h2>
-        {comments.map(comment => <p>{comment.message}</p>)}
+    <ThemeProvider theme={theme}>
+      <div className="FestivalDetailsPage">
+      <div className='details-top'>
+        <div className='details-first-section'>
+          <Typography 
+                component="h1" variant="h2"
+                sx={{marginTop: 10}}
+            >
+                  {festival.name}
+            </Typography>
+          <img width={800} src={festival.image} alt="festivalImage" style={{borderRadius: 20}}/>
+          <p>{festival.description}</p>
+        </div>
+
+        <div className='details-edit-add-section'>
+          <Button
+            color="info"
+            variant="contained"
+            size="large"
+            component="a"
+            href={`/festival/edit/${festivalId}`}
+            sx={{ minWidth: 200, marginRight: 1 }}
+          >
+            Edit
+          </Button>
+
+          <Button
+            color="info"
+            variant="contained"
+            size="large"
+            component="a"
+            sx={{ minWidth: 200 }}
+            onClick={handleSubmitFestival}
+          >
+            Favourite
+          </Button>
+        </div>
+
+        <Container className='details-comment-section' sx={{ marginTop: 5, boxShadow: 5, backgroundColor: '#DCCCBC', marginBottom: 5, paddingBottom: 5, width: 700}}>
+        <div>
+        <h2>Comments</h2>
+        {comments.map(comment => <li>{comment.message}</li>)}
+        </div>
+      </Container>
+
+      <Container sx={{marginBottom: 5, display: 'flex'}}>
         <form onSubmit={handleSubmit}>
-            <label>Add a comment:</label>
-            <input type='text' name='message' onChange={handleChange}/>
-            <button type='submit'>Submit</button>
-        </form>
-      </div>
+              <br/>
+
+              <TextField
+                name="message"
+                id="message"
+                label="Comment"
+                autoFocus
+                onChange={handleChange}
+                sx={{ width: 700}}
+            />
+
+              <Button
+              color="secondary"
+              variant="contained"
+              size="small"
+              component="button"
+              type='submit'
+              sx={{ minWidth: 100, height: 55 }}
+            >
+              Submit
+            </Button>
+          </form>
+      </Container>
+      
     </div>
+    </div>
+    </ThemeProvider>
+    
   );
 }

@@ -29,3 +29,15 @@
 .footer {
   margin-top: 4rem;
 }
+
+.FestivalDetailsPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F9F7F7;
+}
+
+.details-edit-add-section {
+  display: flex;
+  justify-content: center;
+}

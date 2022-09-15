@@ -137,7 +137,7 @@ const handleRemove = (e, id) => {
             {festivals.map((festival) => (
               <Grid item key={festival._id} xs={12} sm={6} md={4}>
                 <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' , bgcolor: '#3F72AF', boxShadow: 10 }}
+                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' , bgcolor: '#D0C5E7', boxShadow: 10 }}
                 >
                   <CardMedia
                     component="img"
@@ -148,7 +148,7 @@ const handleRemove = (e, id) => {
                     image={festival.image}
                     alt="festival"
                   />
-                  <CardContent sx={{ flexGrow: 1 , bgcolor: '#3F72AF', color: '#DBE2EF'}}>
+                  <CardContent sx={{ flexGrow: 1 , bgcolor: '#D0C5E7', color: 'black'}}>
                     <Typography gutterBottom variant="h5" component="h2">
                       {festival.name}
                     </Typography>

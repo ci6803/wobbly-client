@@ -41,7 +41,7 @@ export default function FestivalDetailsPage() {
   const handleSubmitFestival = (e) => {
     e.preventDefault();
     axios.post(`${API_URL}/api/festival/${festivalId}/add`, user);
-    navigate(`/profile/${user._id}`);
+    navigate(`/festival`);
   }
 
   function handleChange(e) {

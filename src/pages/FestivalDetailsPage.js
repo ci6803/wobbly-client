@@ -77,7 +77,6 @@ export default function FestivalDetailsPage() {
   
 
   return (
-    <Box sx={{display: 'flex'}}>
     <ThemeProvider theme={theme}>
       <div className="FestivalDetailsPage">
       <div className='details-top'>
@@ -116,7 +115,7 @@ export default function FestivalDetailsPage() {
           </Button>
         </div>
 
-        <Container className='details-comment-section' sx={{ marginTop: 5, boxShadow: 5, backgroundColor: '#DCCCBC', marginBottom: 5, paddingBottom: 5, width: 700}}>
+        <Container className='details-comment-section' sx={{ marginTop: 5, boxShadow: 5, backgroundColor: '#DCCCBC', marginBottom: 5, paddingBottom: 5, width: 700, display: "flex"}}>
         <div>
         <h2>Comments</h2>
         {comments.map(comment => <li>{comment.message}</li>)}
@@ -152,6 +151,5 @@ export default function FestivalDetailsPage() {
     </div>
     </div>
     </ThemeProvider>
-    </Box>
   );
 }

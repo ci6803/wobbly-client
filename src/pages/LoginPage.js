@@ -32,7 +32,6 @@ function Copyright(props) {
         Wobbly
       </Link>{" "}
       {new Date().getFullYear()}
-      {"."}
     </Typography>
   );
 }
@@ -160,12 +159,12 @@ function LoginPage(props) {
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link href="#" variant="body2">
+                  <Link href="#" variant="body2" color="#C0A387">
                     Forgot password?
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="/signup" variant="body2">
+                  <Link href="/signup" variant="body2" color="#C0A387">
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>

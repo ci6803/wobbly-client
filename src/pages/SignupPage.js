@@ -16,7 +16,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5005';
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5005";
 
 function Copyright(props) {
   return (
@@ -36,7 +36,22 @@ function Copyright(props) {
   );
 }
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#D0C5E7",
+    },
+    secondary: {
+      main: "#DCCCBC",
+    },
+    info: {
+      main: "#112D4E",
+    },
+    success: {
+      main: "#F9F7F7",
+    },
+  },
+});
 
 function SignUpPage(props) {
   const [email, setEmail] = useState("");
@@ -148,15 +163,6 @@ function SignUpPage(props) {
                     onChange={handlePassword}
                   />
                 </Grid>
-
-                <Grid item xs={12}>
-                  <FormControlLabel
-                    control={
-                      <Checkbox value="allowExtraEmails" color="primary" />
-                    }
-                    label="I want to receive inspiration, marketing promotions and updates via email."
-                  />
-                </Grid>
               </Grid>
               <Button
                 type="submit"
@@ -168,7 +174,7 @@ function SignUpPage(props) {
               </Button>
               <Grid container justifyContent="flex-end">
                 <Grid item>
-                  <Link href="/login" variant="body2">
+                  <Link href="/login" variant="body2" color="#C0A387">
                     Already have an account? Log in
                   </Link>
                 </Grid>

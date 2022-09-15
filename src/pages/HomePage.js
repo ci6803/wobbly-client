@@ -30,7 +30,7 @@ function HomePage() {
       <EmailSection />
 
       <Box
-        sx={{ bgcolor: "#112D4E", p: 6 }}
+        sx={{ bgcolor: "#DCCCBC", p: 6 }}
         component="footer"
         className="footer"
       >

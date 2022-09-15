@@ -17,7 +17,7 @@ import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5005';
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5005";
 
 function Copyright(props) {
   return (
@@ -28,7 +28,7 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="https://wobbly-festivals.netlify.app/">
         Wobbly
       </Link>{" "}
       {new Date().getFullYear()}
@@ -37,7 +37,22 @@ function Copyright(props) {
   );
 }
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#D0C5E7",
+    },
+    secondary: {
+      main: "#DCCCBC",
+    },
+    info: {
+      main: "#112D4E",
+    },
+    success: {
+      main: "#F9F7F7",
+    },
+  },
+});
 
 function LoginPage(props) {
   const [email, setEmail] = useState("");

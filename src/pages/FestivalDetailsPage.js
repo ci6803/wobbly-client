@@ -77,6 +77,7 @@ export default function FestivalDetailsPage() {
   
 
   return (
+    <Box sx={{display: 'flex'}}>
     <ThemeProvider theme={theme}>
       <div className="FestivalDetailsPage">
       <div className='details-top'>
@@ -151,5 +152,6 @@ export default function FestivalDetailsPage() {
     </div>
     </div>
     </ThemeProvider>
+    </Box>
   );
 }

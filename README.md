@@ -21,7 +21,7 @@ https://wobbly-festivals.netlify.app
 
 
 ## Features
-:ferris_wheel: CRUD 
+:ferris_wheel: CRUD
 :ferris_wheel: Cloudinary
 :ferris_wheel: Nodemailer 
 :ferris_wheel: Daily 
@@ -31,5 +31,5 @@ https://wobbly-festivals.netlify.app
 
 
 
-![Logo]()
+![Logo](./image/logo.png)
 

@@ -2,7 +2,6 @@ import React from 'react'
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import FestivalCard from '../components/FestivalCard/FestivalCard';
-// import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5005';
@@ -28,7 +27,7 @@ export default function FestivalsPage() {
   return (
     <div className='festival-styling'>
       <Button
-          sx={{color: 'black',bgcolor: 'white'}}
+          sx={{color: 'black',bgcolor: '#D0C5E7', '&:hover' : { backgroundColor: 'white'}}}
           variant="contained"
           onClick={() => {
           navigate('/festival/add')

@@ -8,11 +8,11 @@ import { AuthProviderWrapper } from "./context/auth.context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <Router>
-      <AuthProviderWrapper>
+  <Router>
+    <AuthProviderWrapper>
       <App />
-      </AuthProviderWrapper>
-    </Router>
+    </AuthProviderWrapper>
+  </Router>
 );
 
 reportWebVitals();

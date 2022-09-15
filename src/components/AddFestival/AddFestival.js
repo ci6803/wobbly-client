@@ -14,7 +14,7 @@ import IconButton from "@mui/material/IconButton";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import PostAddRoundedIcon from "@mui/icons-material/PostAddRounded";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
-const API_URL = process.env.REACT_APP_API_URL || 'https://magenta-spider-cape.cyclic.app';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5005';
 
 const theme = createTheme({
   palette: {

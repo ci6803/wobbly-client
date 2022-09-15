@@ -5,7 +5,7 @@ A full stack MERN Application for festival lovers
 
 ## Acknowledgements
 
- - [Ironhack](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - Ironhack
  
 
 ## Authors

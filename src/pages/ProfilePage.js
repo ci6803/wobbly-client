@@ -16,6 +16,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import {uploadImage} from "../api/service"
 import { useNavigate } from 'react-router-dom';
+import { hover } from '@testing-library/user-event/dist/hover';
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5005';
 
 const theme = createTheme();
@@ -81,7 +82,7 @@ const handleRemove = (e, id) => {
         {/* Hero unit */}
         <Box
           sx={{
-            bgcolor: '#DBE2EF',
+            bgcolor: '#D0C5E7',
             pt: 4,
             pb: 5,
           }}
@@ -115,9 +116,9 @@ const handleRemove = (e, id) => {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained" sx={{color: 'white',bgcolor: 'black'}}>Follow Me</Button>
+              <Button variant="contained" sx={{color: '#6B5238',bgcolor: '#DCCCBC', '&:hover': { backgroundColor:'white'}}}>Follow Me</Button>
               <Button
-              sx={{color: 'black',bgcolor: 'white'}}
+              sx={{color: '#6B5238',bgcolor: '#DCCCBC', '&:hover': { backgroundColor:'white'}}}
               variant="contained"
               onClick={() => {
                 navigate('/join')

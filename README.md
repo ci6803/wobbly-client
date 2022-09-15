@@ -12,7 +12,7 @@ A full stack MERN Application for festival lovers
 
 - [@michaelhodgkins](https://github.com/michaelhodgkins)
 - [@hsinjuyu](https://github.com/ci6803)
-- [@adamata](https://github.com/adamamata)
+- [@adamamata](https://github.com/adamamata)
 
 
 ## Demo

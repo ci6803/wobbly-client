@@ -98,7 +98,7 @@ function LoginPage(props) {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Log in
+              <span id="login-font">Log in</span>
             </Typography>
 
             <Box

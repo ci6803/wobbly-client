@@ -1,12 +1,12 @@
 /* font-family: "Poppins", sans-serif; */
 
-body {
-  font-family: "Poppins", sans-serif;
-}
-
 .loginPage,
 .signupPage {
   margin-top: 11rem;
+}
+
+#login-font {
+  font-family: "Poppins", sans-serif;
 }
 
 .FestivalsPage {

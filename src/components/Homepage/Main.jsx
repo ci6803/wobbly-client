@@ -4,7 +4,7 @@ import Typography from "../Typography";
 import MainLayout from "./MainLayout";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { AuthContext } from "../../context/auth.context";
-import { useContext} from "react";
+import { useContext } from "react";
 
 const backgroundImage =
   "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80";
@@ -27,7 +27,6 @@ const theme = createTheme({
 });
 
 export default function HomePage() {
-
   const { isLoggedIn } = useContext(AuthContext);
 
   return (
@@ -62,7 +61,7 @@ export default function HomePage() {
           a platform for festival lovers
         </Typography>
         {isLoggedIn && (
-            <Button
+          <Button
             color="primary"
             variant="contained"
             size="large"
@@ -74,7 +73,7 @@ export default function HomePage() {
           </Button>
         )}
         {!isLoggedIn && (
-            <Button
+          <Button
             color="primary"
             variant="contained"
             size="large"

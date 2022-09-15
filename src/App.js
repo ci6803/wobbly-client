@@ -30,8 +30,8 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/profile/:profileId" element={<ProfilePage />} />
         <Route path="/signup" element={<SignUpPage />} />
-        <Route path='/join' element={<Join/>}/>
-        <Route path='/meeting/:id' element={<Meeting/>}/>
+        <Route path="/join" element={<Join />} />
+        <Route path="/meeting/:id" element={<Meeting />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>

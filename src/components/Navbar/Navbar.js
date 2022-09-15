@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useContext} from "react";
+import { useContext } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -44,12 +44,14 @@ const ResponsiveAppBar = () => {
             {isLoggedIn && (
               <div className="navbar-container">
                 <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-                  <img
-                    src="../../image/logo.png"
-                    alt="logo"
-                    className="logo"
-                  />
-                  <Button
+                  <a href="/">
+                    <img
+                      src="../../image/logo.png"
+                      alt="logo"
+                      className="logo"
+                    />
+                  </a>
+                  {/* <Button
                     sx={{ my: 2, color: "black", display: "block", margin: 1 }}
                   >
                     <Link
@@ -58,7 +60,7 @@ const ResponsiveAppBar = () => {
                     >
                       <strong>HOME</strong>
                     </Link>
-                  </Button>
+                  </Button> */}
                   <Button
                     sx={{ my: 2, color: "black", display: "block", margin: 1 }}
                   >
@@ -97,6 +99,9 @@ const ResponsiveAppBar = () => {
             )}
             {!isLoggedIn && (
               <Box sx={{ display: "flex", alignItems: "center" }}>
+                <a href="/">
+                  <img src="../../image/logo.png" alt="logo" className="logo" />
+                </a>
                 <Button
                   sx={{ my: 2, color: "black", display: "block", margin: 1 }}
                 >

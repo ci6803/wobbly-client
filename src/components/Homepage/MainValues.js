@@ -52,19 +52,6 @@ function MainValues() {
           <Grid container spacing={5}>
             <Grid item xs={12} md={4}>
               <Box sx={item}>
-                <Diversity1RoundedIcon sx={{ fontSize: 55 }} />
-                <Typography variant="h6" sx={{ my: 5 }}>
-                  Live chat
-                </Typography>
-                <Typography variant="h5">
-                  {
-                    "Instantly connect with fellow festival lovers with video chat or text messages."
-                  }
-                </Typography>
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Box sx={item}>
                 <FestivalRoundedIcon sx={{ fontSize: 55 }} />
                 <Typography variant="h6" sx={{ my: 5 }}>
                   New experiences
@@ -72,6 +59,19 @@ function MainValues() {
                 <Typography variant="h5">
                   {
                     "Personalised profile page, save your favourite festivals to remind you for upcoming events."
+                  }
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box sx={item}>
+                <Diversity1RoundedIcon sx={{ fontSize: 55 }} />
+                <Typography variant="h6" sx={{ my: 5 }}>
+                  Live chat
+                </Typography>
+                <Typography variant="h5">
+                  {
+                    "Instantly connect with fellow festival lovers with video chat or text messages."
                   }
                 </Typography>
               </Box>

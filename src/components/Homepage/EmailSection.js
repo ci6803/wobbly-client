@@ -60,7 +60,7 @@ function EmailSection() {
                   Receive information
                 </Typography>
                 <Typography variant="h5">
-                  Get closer to the upcoming festivals.
+                  Get information to the upcoming festivals.
                 </Typography>
                 <TextField
                   noBorder

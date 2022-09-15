@@ -17,7 +17,7 @@ import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5005';
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5005";
 
 function Copyright(props) {
   return (
@@ -28,16 +28,30 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="https://wobbly-festival.herokuapp.com">
         Wobbly
       </Link>{" "}
       {new Date().getFullYear()}
-      {"."}
     </Typography>
   );
 }
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#D0C5E7",
+    },
+    secondary: {
+      main: "#DCCCBC",
+    },
+    info: {
+      main: "#112D4E",
+    },
+    success: {
+      main: "#F9F7F7",
+    },
+  },
+});
 
 function LoginPage(props) {
   const [email, setEmail] = useState("");
@@ -84,7 +98,7 @@ function LoginPage(props) {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Log in
+              <span id="login-font">Log in</span>
             </Typography>
 
             <Box
@@ -145,12 +159,12 @@ function LoginPage(props) {
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link href="#" variant="body2">
+                  <Link href="#" variant="body2" color="#C0A387">
                     Forgot password?
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="/signup" variant="body2">
+                  <Link href="/signup" variant="body2" color="#C0A387">
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>

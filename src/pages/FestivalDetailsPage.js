@@ -87,7 +87,7 @@ export default function FestivalDetailsPage() {
                   {festival.name}
             </Typography>
           <img width={800} src={festival.image} alt="festivalImage" style={{borderRadius: 20}}/>
-          <p>{festival.description}</p>
+          <p style={{textAlign: 'center', width: 500}}>{festival.description}</p>
         </div>
 
         <div className='details-edit-add-section'>

@@ -42,6 +42,10 @@ https://wobbly-festivals.netlify.app
     src="./public/readme_images/Profile Page.png"
     width="700"
   /> |
+  | <h3 align="center">Festivals Page</h3> | <img
+    src="./public/readme_images/Festivals Page.png"
+    width="700"
+  /> |
 </details>
 
 

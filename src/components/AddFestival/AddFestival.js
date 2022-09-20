@@ -14,15 +14,15 @@ import IconButton from "@mui/material/IconButton";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import PostAddRoundedIcon from "@mui/icons-material/PostAddRounded";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5005';
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5005";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#3F72AF",
+      main: "#D0C5E7",
     },
     secondary: {
-      main: "#DBE2EF",
+      main: "#DCCCBC",
     },
     info: {
       main: "#112D4E",

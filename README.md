@@ -45,12 +45,16 @@ https://wobbly-festivals.netlify.app
     src="./public/readme_images/Landing Page.png"
     width="700"
   /> 
-   <h3 align="center">Profile Page</h3> <img
+   <h3>Profile Page</h3> <img
     src="./public/readme_images/Profile Page.png"
     width="700"
   /> 
-   <h3 align="center">Festivals Page</h3> <img
+   <h3>Festivals Page</h3> <img
     src="./public/readme_images/Festivals Page.png"
+    width="700"
+  /> 
+  <h3>Chatroom Page</h3> <img
+    src="./public/readme_images/Chatroom.png"
     width="700"
   /> 
 </details>

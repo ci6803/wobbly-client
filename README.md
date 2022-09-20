@@ -35,11 +35,11 @@ https://wobbly-festivals.netlify.app
   |   Description | Screenshot | 
   |:-------------:| -----------|
   | <h3>Landing Page</h3> | <img
-    src="readme_images/LandingPage.png"
+    src="./"
     width="700"
   /> |
   | <h3 align="center">Profile Page</h3> | <img
-    src="/readme_images/Profile Page.png"
+    src="./public/readme_images/Profile Page.png"
     width="700"
   /> |
 </details>

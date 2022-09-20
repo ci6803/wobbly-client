@@ -29,5 +29,19 @@ https://wobbly-festivals.netlify.app
 :ferris_wheel: Comments 
 :ferris_wheel: Profile page 
 
+<details open>
+  <summary>:gear: Functionality</summary>
+
+  |   Description | Screenshot | 
+  |:-------------:| -----------|
+  | <h3>Landing Page</h3> | <img
+    src="LandingPage.png"
+    width="700"
+  /> |
+  | <h3 align="center">Profile Page</h3> | <img
+    src="Profile Page.png"
+    width="700"
+  /> |
+</details>
 
 

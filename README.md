@@ -33,6 +33,14 @@ https://wobbly-festivals.netlify.app
 
 ## Screenshots
 <details open>
+<h3>Signup Page</h3>  <img
+    src="./public/readme_images/Signup.png"
+    width="700"
+  /> 
+  <h3>Login Page</h3>  <img
+    src="./public/readme_images/Login.png"
+    width="700"
+  /> 
    <h3>Landing Page</h3>  <img
     src="./public/readme_images/Landing Page.png"
     width="700"
